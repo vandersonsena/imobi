@@ -1,0 +1,106 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ionic-plugin-deeplinks@1.0.14",
+        "scope": null,
+        "escapedName": "ionic-plugin-deeplinks",
+        "name": "ionic-plugin-deeplinks",
+        "rawSpec": "1.0.14",
+        "spec": "1.0.14",
+        "type": "version"
+      },
+      "/var/www/html/imobi_places"
+    ]
+  ],
+  "_from": "ionic-plugin-deeplinks@1.0.14",
+  "_id": "ionic-plugin-deeplinks@1.0.14",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ionic-plugin-deeplinks",
+  "_nodeVersion": "6.9.2",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ionic-plugin-deeplinks-1.0.14.tgz_1482943781521_0.4643210342619568"
+  },
+  "_npmUser": {
+    "name": "maxlynch",
+    "email": "max@ionic.io"
+  },
+  "_npmVersion": "3.10.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ionic-plugin-deeplinks@1.0.14",
+    "scope": null,
+    "escapedName": "ionic-plugin-deeplinks",
+    "name": "ionic-plugin-deeplinks",
+    "rawSpec": "1.0.14",
+    "spec": "1.0.14",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ionic-plugin-deeplinks/-/ionic-plugin-deeplinks-1.0.14.tgz",
+  "_shasum": "4448f32897014576c43a3f8633a75e0efe040a9f",
+  "_shrinkwrap": null,
+  "_spec": "ionic-plugin-deeplinks@1.0.14",
+  "_where": "/var/www/html/imobi_places",
+  "author": {
+    "name": "Max Lynch",
+    "email": "max@ionic.io"
+  },
+  "bugs": {
+    "url": "https://github.com/driftyco/ionic-plugin-deeplinks/issues"
+  },
+  "cordova": {
+    "id": "ionic-plugin-deeplinks",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "mkpath": ">=1.0.0",
+    "node-version-compare": ">=1.0.1",
+    "plist": ">=1.2.0",
+    "xml2js": ">=0.4"
+  },
+  "description": "Ionic Deeplinks Plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "4448f32897014576c43a3f8633a75e0efe040a9f",
+    "tarball": "https://registry.npmjs.org/ionic-plugin-deeplinks/-/ionic-plugin-deeplinks-1.0.14.tgz"
+  },
+  "gitHead": "6a123312bb4738c83ff3e81b8a0d916fa2430ecc",
+  "homepage": "https://github.com/driftyco/ionic-plugin-deeplinks#readme",
+  "issue": "https://github.com/driftyco/ionic-plugin-deeplinks/issues",
+  "keywords": [
+    "ionic",
+    "cordova",
+    "deeplink",
+    "deeplinks",
+    "mobile",
+    "hybrid",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "maxlynch",
+      "email": "max@ionic.io"
+    }
+  ],
+  "name": "ionic-plugin-deeplinks",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/driftyco/ionic-plugin-deeplinks.git"
+  },
+  "scripts": {},
+  "version": "1.0.14"
+}

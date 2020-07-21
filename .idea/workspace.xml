@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c6ecb4d-bfc5-4574-a7e2-34db9905ecff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imobiplaces.apk" beforeDir="false" afterPath="$PROJECT_DIR$/imobiplaces.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imobiplaces.keystore" beforeDir="false" afterPath="$PROJECT_DIR$/imobiplaces.keystore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/ionic.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/resources/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/xml/network_security_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/xml/network_security_config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-1024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-24@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-24@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-27.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-27.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-29.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-29@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-29@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-44@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-44@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-83.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-86@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-86@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-98@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-98@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-2436h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-2436h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-2436h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-2436h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@~ipadpro.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@~ipadpro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@~ipadpro.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@~ipadpro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~universal~anyany.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~universal~anyany.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/animate/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/animate/animate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Alatsi-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/Alatsi-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Black.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Black.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-BlackItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-BlackItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-BoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-ExtraLight.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-ExtraLight.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-ExtraLightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-ExtraLightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Italic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Light.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-LightItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-LightItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-MediumItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-MediumItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-SemiBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-SemiBoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/SourceCodePro-SemiBoldItalic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/app-icon/17a.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/app-icon/17a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 119xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 119xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 120xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 120xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 121xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 121xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 122xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 122xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 124xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 124xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 125xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 125xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 126xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 126xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 127xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 127xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 128xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 128xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 129xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 129xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 130xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 130xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 131xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 131xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 132xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 132xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 133xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 133xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 134xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 134xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 137xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 137xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 138xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 138xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 139xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 139xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 140xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 140xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 141xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 141xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 142xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 142xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 143xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 143xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 145xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 145xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 147xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 147xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 148xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 148xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 152xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 152xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 156xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 156xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 158xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 158xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 159xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 159xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 162xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 162xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 163xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 163xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 164xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 164xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 165xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 165xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 166xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 166xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 167xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 167xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 168xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 168xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 169xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 169xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 170xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 170xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 171xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 171xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 174xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 174xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 176xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 176xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 178xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 178xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 181xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 181xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 184xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 184xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 185xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 185xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 186xxxhdpi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/Ativo 186xxxhdpi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/bed_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/bed_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/car_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/car_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/close_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/close_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/edit_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/edit_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/fav_icon_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/fav_icon_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/favourite_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/favourite_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/home_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/home_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/home_ico_marker.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/home_ico_marker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/home_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/home_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/home_ico_yellow_marker.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/home_ico_yellow_marker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/ico_check_greem.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/ico_check_greem.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/ico_custom.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/ico_custom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/key_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/key_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/locate_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/locate_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/pet_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/pet_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/pin-gray.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/pin-gray.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/pin-ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/pin-ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/pin_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/pin_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/qr.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/qr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/qrcode_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/qrcode_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/schedule_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/schedule_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/star_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/star_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/user_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/user_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/user_ico_yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/user_ico_yellow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/v2/zoom_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/v2/zoom_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/bg-bottom-menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/bg-bottom-menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/bg-top-menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/bg-top-menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/logo-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/logo-blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/logo-without-pin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/logo-without-pin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/mansao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/mansao.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/pin-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/imgs/pin-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/details/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/details/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/details/details.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/details/details.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/details/details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/details/details.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/details/gallery/carrousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/details/gallery/carrousel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/details/gallery/carrousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/details/gallery/carrousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/details/gallery/carrousel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/details/gallery/carrousel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/discover/discover.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/discover/discover.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/discover/discover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/discover/discover.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/discover/discover.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/discover/discover.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/favorites/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/favorites/favorites.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/favorites/favorites.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/favorites/favorites.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/favorites/favorites.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/favorites/favorites.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/filter/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/filter/filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/filter/filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/filter/filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/filter/filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/filter/filter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/maps/maps.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/maps/maps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/maps/maps.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/maps/maps.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/maps/maps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/maps/maps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myaction/myaction.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/myaction/myaction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myaction/myaction.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/myaction/myaction.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/myaction/myaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/myaction/myaction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/neighboors/neighboors.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/neighboors/neighboors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/neighboors/neighboors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/neighboors/neighboors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/neighboors/neighboors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/neighboors/neighboors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property2.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property2.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property3.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property3.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property3.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property3.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property3.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property4.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property4.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property4.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/property/property4.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/property/property4.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/schedule/schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/schedule/schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/schedule/schedule.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/schedule/schedule.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/schedule/schedule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/schedule/schedule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup/signup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup/signup.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup/signup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup/signup2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup/signup2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup/signup2.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup/signup2.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signup/signup2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signup/signup2.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sociallogin/sociallogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sociallogin/sociallogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sociallogin/sociallogin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sociallogin/sociallogin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sociallogin/sociallogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sociallogin/sociallogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/splash/splash.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/splash/splash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/splash/splash.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/splash/splash.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/splash/splash.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/splash/splash.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/terms/terms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/terms/terms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/terms/terms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/terms/terms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/terms/terms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/terms/terms.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/brokers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/brokers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/categories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/categories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/modalities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/modalities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/positions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/positions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/property.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/property.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/schedule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/schedule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/signup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/token.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/token.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1d5ZI7DiUDIE4Am1Z2yNLJmkT02" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c6ecb4d-bfc5-4574-a7e2-34db9905ecff" name="Default Changelist" comment="" />
+      <created>1591716833956</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591716833956</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

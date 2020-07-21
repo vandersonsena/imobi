@@ -1,0 +1,114 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-cszbar@^1.3.4",
+        "scope": null,
+        "escapedName": "cordova-plugin-cszbar",
+        "name": "cordova-plugin-cszbar",
+        "rawSpec": "^1.3.4",
+        "spec": ">=1.3.4 <2.0.0",
+        "type": "range"
+      },
+      "/var/www/html/imobi_places"
+    ]
+  ],
+  "_from": "cordova-plugin-cszbar@>=1.3.4 <2.0.0",
+  "_id": "cordova-plugin-cszbar@1.3.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-cszbar",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-cszbar-1.3.4.tgz_1494255730994_0.912855779286474"
+  },
+  "_npmUser": {
+    "name": "dcousens",
+    "email": "email@dcousens.com"
+  },
+  "_npmVersion": "4.5.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-cszbar@^1.3.4",
+    "scope": null,
+    "escapedName": "cordova-plugin-cszbar",
+    "name": "cordova-plugin-cszbar",
+    "rawSpec": "^1.3.4",
+    "spec": ">=1.3.4 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-cszbar/-/cordova-plugin-cszbar-1.3.4.tgz",
+  "_shasum": "fb49931923e3563c0d4c969569ac0602c5f3eb6a",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-cszbar@^1.3.4",
+  "_where": "/var/www/html/imobi_places",
+  "author": {
+    "name": "TJ Woon",
+    "email": "tj@cloudsky.org"
+  },
+  "bugs": {
+    "url": "https://github.com/tjwoon/csZBar/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-cszbar",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Plugin to integrate with the ZBar barcode scanning library.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "fb49931923e3563c0d4c969569ac0602c5f3eb6a",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-cszbar/-/cordova-plugin-cszbar-1.3.4.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=3.0.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=3.0.0"
+    }
+  ],
+  "gitHead": "4f6855cb413d3791caca79242563fd2a3d9ac410",
+  "homepage": "https://github.com/tjwoon/csZBar#readme",
+  "keywords": [
+    "cszbar",
+    "zbar",
+    "barcode",
+    "qr",
+    "qr code",
+    "scanner",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "dcousens",
+      "email": "email@dcousens.com"
+    },
+    {
+      "name": "tjwoon",
+      "email": "tj@cloudsky.org"
+    }
+  ],
+  "name": "cordova-plugin-cszbar",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjwoon/csZBar.git"
+  },
+  "scripts": {},
+  "version": "1.3.4"
+}

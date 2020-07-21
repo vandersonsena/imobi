@@ -1,0 +1,146 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "onesignal-cordova-plugin@^2.7.0",
+        "scope": null,
+        "escapedName": "onesignal-cordova-plugin",
+        "name": "onesignal-cordova-plugin",
+        "rawSpec": "^2.7.0",
+        "spec": ">=2.7.0 <3.0.0",
+        "type": "range"
+      },
+      "/var/www/html/imobi_places"
+    ]
+  ],
+  "_from": "onesignal-cordova-plugin@>=2.7.0 <3.0.0",
+  "_hasShrinkwrap": false,
+  "_id": "onesignal-cordova-plugin@2.9.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/onesignal-cordova-plugin",
+  "_nodeVersion": "12.16.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/onesignal-cordova-plugin_2.9.1_1588121682526_0.9241102902179048"
+  },
+  "_npmUser": {
+    "name": "mike_choch",
+    "email": "mike@onesignal.com"
+  },
+  "_npmVersion": "6.13.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "onesignal-cordova-plugin@^2.7.0",
+    "scope": null,
+    "escapedName": "onesignal-cordova-plugin",
+    "name": "onesignal-cordova-plugin",
+    "rawSpec": "^2.7.0",
+    "spec": ">=2.7.0 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/onesignal-cordova-plugin/-/onesignal-cordova-plugin-2.9.1.tgz",
+  "_shasum": "72e68ec1395bd93a5ac4c183120914ce934b55b6",
+  "_shrinkwrap": null,
+  "_spec": "onesignal-cordova-plugin@^2.7.0",
+  "_where": "/var/www/html/imobi_places",
+  "author": {
+    "name": "Josh Kasten, Brad Hesse, Rodrigo Gomez-Palacio"
+  },
+  "bugs": {
+    "url": "https://github.com/onesignal/OneSignal-Cordova-SDK/issues"
+  },
+  "cordova": {
+    "id": "onesignal-cordova-plugin",
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "amazon-fireos"
+    ]
+  },
+  "cordova_name": "OneSignal Push Notifications",
+  "dependencies": {},
+  "description": "OneSignal is a high volume Push Notification service for mobile apps. In addition to basic notification delivery, OneSignal also provides tools to localize, target, schedule, and automate notifications that you send.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-lxHaHHgd5r0/YEpkbO7C4L2/QgYf8etmwJZdoEGaxaeWOd4ShYgqF1rsxzETlIsdrjCvbYq/1pgGyhqQ1Y9qzw==",
+    "shasum": "72e68ec1395bd93a5ac4c183120914ce934b55b6",
+    "tarball": "https://registry.npmjs.org/onesignal-cordova-plugin/-/onesignal-cordova-plugin-2.9.1.tgz",
+    "fileCount": 26,
+    "unpackedSize": 586867,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqNBTCRA9TVsSAnZWagAAOC8P/iwi5bbJJ9d8mmw3lVhP\njEt4nf4FY0gcP41+T+vjDREqgP42Hi7DA/F39/E6cGLnUwBgokI7xuXdyMVE\nkNeS+I3PzQ0D37sko62ZlbqdyMGNPnEUFjDTKo1JjpKGzwKR7UFyc+hbcqIz\nDvxJzqbc+7whx/iMo/rkIQnNkubjaiJ3T4kRf2sB0bksdPWS6KUu52Fy0yxA\n11BL07njFJB/hXLUtSHtiinGCWQfZ/8CXqOV6mPVo0xuQHXOHfyVH5Edydto\n3c7DGjnTLwNJy5MIr431Sda1VxiXvop7ATBlrmFEvDpnmsPXvRvdEDlJ/Nwl\nHQDtAOFTjOdC9fTmUoePEa0dM58J33BVXkDQE9awtBiDFRu7q34DJpY7WB/s\nK68h9XpTS6C4WLbH+rtBig3iGQsxF7uViJF/3XmHNegldHbWT/ByuBS0pdci\nAQEzLAAyNpzVYhvaowmrJOxuscMS2wfM+VEzZnQZFmQRJI00HZGPowCYDbs7\nhASFThhQSnM66dxJfw4eKwOumIXYszRixgLCyNdL3+C5Watajy0Erz1djeo3\nWj55XRWfM3wjaz1aRxb7CmOqSCzWN3JNYrIcxXydE+txX+K4vqElgvqYIRt1\nFQ26/Zw0OZffqm/h0uQIWaNizhjaXyWw6KePHXyfWDr8Lvhr2l2F6vl2Bm2N\nD94h\r\n=fv6E\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0"
+    },
+    {
+      "name": "apple-xcode",
+      "version": ">=8.0.0"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=7.0.0"
+    },
+    {
+      "name": "cordova",
+      "version": ">=6.4.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=4.3.0"
+    }
+  ],
+  "gitHead": "8340c3f34cc141724b9d2db0594b8df259d86846",
+  "homepage": "https://github.com/onesignal/OneSignal-Cordova-SDK#readme",
+  "keywords": [
+    "push",
+    "notification",
+    "push notification",
+    "push notifications",
+    "apns",
+    "gcm",
+    "adm",
+    "retention",
+    "messaging",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-amazon-fireos"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "kasten",
+      "email": "josh@onesignal.com"
+    },
+    {
+      "name": "mike_choch",
+      "email": "mike@onesignal.com"
+    },
+    {
+      "name": "rgomezp",
+      "email": "rodrigo@onesignal.com"
+    }
+  ],
+  "name": "onesignal-cordova-plugin",
+  "optionalDependencies": {},
+  "platforms": [
+    "android",
+    "ios",
+    "windows",
+    "amazon-fireos"
+  ],
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onesignal/OneSignal-Cordova-SDK.git"
+  },
+  "version": "2.9.1"
+}
