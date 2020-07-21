@@ -1,0 +1,285 @@
+.mapboxgl-ctrl {
+  visibility: hidden !important;
+}
+  page-discover {
+    img {
+      max-width: none !important;
+    }
+    .pgm-html-info-content-frame {
+      border: none !important;
+      border-radius: 10px !important;
+    }
+    ion-header {
+        .toolbar {
+            position: absolute;
+            .toolbar-background {
+                background: transparent;
+            }
+            .toolbar-title {
+                color: color($colors, azul);
+            }
+        }
+    }
+    .main-home {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 0;
+    }
+    .suggestions {
+      position: absolute;
+      top: 100vw;
+      width: 100%;
+    }
+    .suggestions-h4 {
+      font-family: 'Alatsi Regular';
+      margin-left: 3vw;
+    }
+    .listprops {
+    position: relative;
+    left: 5px;
+    width: 100%;
+    margin-right: 3vw;
+    height: 100vw;
+    overflow: scroll;
+  } 
+  .thumb-content {
+    position: relative;
+    margin-left: 2vw;
+    margin-right: 4vw;
+    display: inline-block;
+    height: 57vw;
+    margin-bottom: 3vw;
+    width: 42%;
+  }
+  .category {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-family: "Alatsi Regular";
+    background-color: #ededed;
+    filter: opacity(0.9);
+    padding: 2px 4px 2px 4px;
+    border-radius: 7px;
+    color: color($colors, chumbo);
+    font-size: 2.7vw;
+    font-weight: bold;
+  }
+  .location {
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    font-family: "Alatsi Regular";
+    color: color($colors, azul);
+    font-size: 2.7vw;
+    font-weight: bold;
+  }
+  .modality {
+    position: absolute;
+    top: 5.2vw;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 2.8vw;
+    left: 7px;
+  }
+  .modality2 {
+    position: absolute;
+    top: 5.2vw;
+    left: 0;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 3.5vw;
+  }
+  .price {
+    position: absolute;
+    top: 4.5vw;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 4.2vw;
+    right: 6px;
+  }
+  .price2 {
+    position: absolute;
+    top: 0.5vw;
+    right: 0;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 3.5vw;
+    
+  }
+  .center-icons {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+  }
+  .group-icons {
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    width: 100%;
+
+  }
+  .space-group-icons {
+    position: relative;
+    top: 22vw;
+    width: 100%;
+  }
+  .icons {
+    position: relative;
+    width: 33%;
+    text-align: center;
+    //bottom: 0;
+    float: left;
+    border: 0;
+  }
+  .img-thumb {
+    position: relative;
+    width: 46vw;
+    height: 42vw;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  .icon-home-h {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/home_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+  }
+  .icon-home-b {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/bed_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-home-p {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/pet_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-home-c {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/car_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .area {
+    position: relative;
+    bottom: 0;
+    //left: 0;
+    width: auto;
+    display: inline-block;
+  }
+  .measure {
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 2.5vw;
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  .thumb-details {
+    position: absolute;
+    top: 27vw;
+    left: 2px;
+    width: 45vw;
+    min-height: 28vw;
+    border-radius: 5px;
+    background-color: rgb(248, 244, 244);
+    filter: opacity(0.95);
+  }
+  .btn-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: color($colors, azul);
+    z-index: 1000;
+}
+  h4 {
+    font-family: "Alatsi Regular";
+    color: color($colors, azul);
+    font-size: 6vw;
+  }
+    .map-content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 97vw;;
+    }
+    #map{
+      position: relative;
+      width: auto;
+      height: inherit;
+      
+    }
+    .marker-pin {
+      background-image: url(./../../assets/icon/app-icon/13.png);
+      background-size: cover;
+      width: 35px;
+      height: 35px;
+      border-radius: 35%;
+      cursor: pointer;
+    }
+    .marker-bro {
+      background-image: url(./../../assets/icon/app-icon/17.png);
+      background-size: cover;
+      width: 35px;
+      height: 35px;
+      border-radius: 35%;
+      cursor: pointer;
+    }
+    .mapboxgl-popup {
+      max-width: 200px;
+      height: 110px;
+    }
+    .mapboxgl-popup-content {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .mapboxgl-ctrl-top-right {
+      top: 5px;
+      padding-left: 70px;
+      background-color: transparent;
+    }
+    .mapboxgl-ctrl-geocoder--input {
+      border-radius: 25px;
+      color: color($colors, chumbo);
+      font-weight: bold;
+      background-color: white;
+      font-size: 4.5vw;
+      height: 40px;
+      border: 1px solid rgb(197, 196, 196);
+    }
+    .mapboxgl-ctrl-geocoder--icon-search {
+      top: 9px;
+    }
+    .mapboxgl-ctrl-geocoder--icon-close {
+      margin-top: 3px;
+    }
+    .mapboxgl-ctrl-geocoder--icon-load {
+      margin-top: 3px;
+    }
+    .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+      background-color: transparent;
+    }
+    .nolines {
+      background-color: transparent;
+    }
+  }

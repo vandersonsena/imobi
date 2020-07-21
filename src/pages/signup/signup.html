@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar >
+      <ion-title>{{ profile }}</ion-title>
+    </ion-navbar> 
+  </ion-header>
+
+<ion-content  padding class="masters">
+
+    <div class="footer-frm">
+        <div class="numbers">
+            <div class="bg-num">
+                <div class="num">1</div>
+                <div *ngIf="type != 4" class="num-out">2</div>
+            </div>
+        </div>
+        <form [formGroup]="form">
+            <ion-list radio-group no-lines>
+                <ion-item class="nolines">
+                    <ion-label *ngIf="form.controls.name.valid || (!form.controls.name.dirty && !submitAttempt)" color="light" stacked>Informe seu Nome:</ion-label>
+                    <ion-label *ngIf="!form.controls.name.valid && (form.controls.name.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe seu nome!</strong></ion-label>
+                    <ion-input type="text" placeholder="ex: Danielly Souza" name="name" formControlName="name"></ion-input>
+                </ion-item>
+                <ion-item class="nolines">
+                    <ion-label *ngIf="form.controls.email.valid || (!form.controls.email.dirty && !submitAttempt)" color="light" stacked>Informe seu Email:</ion-label>
+                    <ion-label *ngIf="!form.controls.email.valid && (form.controls.email.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe seu email!</strong></ion-label>
+                    <ion-input type="email" placeholder="ex: seu@email.com.br" name="email" formControlName="email"></ion-input>
+                </ion-item>
+                <ion-item class="nolines">
+                    <ion-label *ngIf="form.controls.pwd.valid || (!form.controls.pwd.dirty && !submitAttempt)" color="light" stacked>Senha:</ion-label>
+                    <ion-label *ngIf="!form.controls.pwd.valid && (form.controls.pwd.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe uma senha válida!</strong></ion-label>
+                    <ion-input maxlength="8" formControlName="pwd" type="password" placeholder="De 6 a 8 caracteres"></ion-input>
+                </ion-item>
+                <ion-item class="nolines">
+                    <ion-label *ngIf="form.controls.cpwd.valid || (!form.controls.cpwd.dirty && !submitAttempt)" color="light" stacked>Confirme a Senha:</ion-label>
+                    <ion-label *ngIf="!form.controls.cpwd.valid && (form.controls.cpwd.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> As senhas não conferem!</strong></ion-label>
+                    <ion-input maxlength="8" formControlName="cpwd" type="password" placeholder="De 6 a 8 caracteres"></ion-input>
+                </ion-item>
+               <ion-item class="nolines" *ngIf="type != 4">
+                    <ion-label *ngIf="form.controls.tel.valid || (!form.controls.tel.dirty && !submitAttempt)" color="light" stacked>Informe seu Telefone:</ion-label>
+                    <ion-label *ngIf="!form.controls.tel.valid && (form.controls.tel.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe seu telefone!</strong></ion-label>
+                    <ion-input type="tel" maxlength="15" [brmasker]="{phone: true}" placeholder="ex: (11) 93456-0000" name="tel" formControlName="tel"></ion-input>
+                </ion-item>
+                <ion-item class="nolines" *ngIf="type == 4">
+                    <ion-label *ngIf="form.controls.tel.valid || (!form.controls.tel.dirty && !submitAttempt)" color="light" stacked>Telefone para Contato da Imobi:</ion-label>
+                    <ion-label *ngIf="!form.controls.tel.valid && (form.controls.tel.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe um telefone de contato!</strong></ion-label>
+                    <ion-input type="tel" maxlength="15" [brmasker]="{phone: true}" placeholder="ex: (11) 93456-0000" name="tel" formControlName="tel"></ion-input>
+                </ion-item>
+                <ion-item class="nolines">
+                    <ion-label *ngIf="form.controls.niver.valid || (!form.controls.niver.dirty && !submitAttempt)" color="light" stacked>Sua Data de Nascimento:</ion-label>
+                    <ion-label *ngIf="!form.controls.niver.valid && (form.controls.niver.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe seu nascimento!</strong></ion-label>
+                    <ion-input type="tel" maxlength="10" [brmasker]="{mask:'00/00/0000', len:10}" placeholder="ex: 14/01/1981" name="niver" formControlName="niver"></ion-input>
+                </ion-item>
+                <ion-item class="nolines" *ngIf="type == 2">
+                    <ion-label *ngIf="form.controls.cpfcnpj.valid || (!form.controls.cpfcnpj.dirty && !submitAttempt)" color="light" stacked>Informe seu CPF:</ion-label>
+                    <ion-label *ngIf="!form.controls.cpfcnpj.valid && (form.controls.cpfcnpj.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe seu CPF corretamente!</strong></ion-label>
+                    <ion-input type="tel" maxlength="18" [brmasker]="this.currentMask" placeholder="ex: 543.765.987-10" name="cpfcnpj" formControlName="cpfcnpj"></ion-input>
+                </ion-item>
+                <ion-item class="nolines" *ngIf="type == 4">
+                    <ion-label *ngIf="form.controls.cpfcnpj.valid || (!form.controls.cpfcnpj.dirty && !submitAttempt)" color="light" stacked>Informe o CNPJ da Imobiliária:</ion-label>
+                    <ion-label *ngIf="!form.controls.cpfcnpj.valid && (form.controls.cpfcnpj.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o CNPJ corretamente!</strong></ion-label>
+                    <ion-input type="tel" maxlength="18" [brmasker]="this.currentMask" placeholder="ex: 01.234.567/0001-89" name="cpfcnpj" formControlName="cpfcnpj"></ion-input>
+                </ion-item>
+            </ion-list>
+        </form>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="azul">
+       <!--  <button id="btback" ion-button block icon-left type="submit">
+            <ion-icon name="arrow-dropleft-circle"></ion-icon>
+            VOLTAR
+        </button> -->
+        <button id="btok" ion-button block icon-right type="button" (click)="submitSignup()">
+            AVANÇAR
+            <ion-icon name="arrow-dropright-circle"></ion-icon>
+        </button>
+    </ion-toolbar>
+  </ion-footer>

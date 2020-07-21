@@ -1,0 +1,2049 @@
+.md {
+  .menu-inner {
+    width: 70% !important;
+  }
+  .avatar {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 4vw;
+    position: relative;
+    top: 2px;
+    right: 5px;
+    border: 2px solid white;
+  }
+  .center-home-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .logo-home {
+    position: relative;
+    text-align: center;
+    width: 12vh;
+    top: 5px;
+  }
+  ion-navbar.toolbar {
+    height: 58px !important;
+  }
+ 
+}
+.bar-buttons-ios[end] {
+  font-size: 1.7em !important;
+}
+.bar-buttons-md[end] {
+  top: 5px;
+  font-size: 1.7em !important;
+}
+.ios {
+  .menu-inner {
+    width: 70% !important;
+  }
+  .avatar {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 4vw;
+    position: relative;
+    top: 3px;
+    right: 15px;
+    border: 2px solid white;
+  }
+  .center-home-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .logo-home {
+    position: relative;
+    text-align: center;
+    width: 12vh;
+    top: 5px;
+  }
+  ion-navbar.toolbar {
+    height: 58px !important;
+  }
+}
+page-home {
+
+  .main-logged-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 30px;
+    height: 140px;
+  }
+  .item-div-menu-logged {
+    position: relative;
+    left: 3vw;
+    height: 8vh;
+    width: 60%;
+    
+  }
+  img {
+    max-width: none !important;
+  }
+  .pgm-html-info-content-frame {
+    border: none !important;
+    border-radius: 10px !important;
+  }
+    .item-span-menu-logged {
+    position: relative;
+    top: 0;
+    color: color($colors, azul);
+    font-family: 'Alatsi Regular';
+    font-size: 3vw;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+  }
+  .item-span-title-menu-logged {
+    font-size: 4vw;
+  }
+  .det-login {
+    font-size: 3vw;
+  }
+  .icons-menu-logged {
+    font-size: 3vh;
+    font-weight: bold;
+    position: relative;
+    top: 1vh;
+    color: color($colors, azul);
+  }
+  .main-list-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 150px;
+    max-height: 70vw;
+    overflow: scroll;
+  }
+  .item-div-menu {
+    position: relative;
+    left: 3vw;
+    height: 6vh;
+    top: 2vh;
+  }
+  .item-span-menu {
+    position: absolute;
+    top: 0;
+    color: color($colors, azul);
+    font-family: 'Alatsi Regular';
+    font-size: 3.5vw;
+    margin-left: 2vw;
+  }
+  .icons-menu {
+    position: relative;
+    margin-right: 1vw;
+    font-size: 5vw;
+    width: 5vw;
+    color: color($colors, azul);
+  }
+  .main-content-home {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: inherit;
+  }
+  .fixed-content-home {
+    position: fixed;
+    width: 100%;
+    min-height: 15vw;
+    height: 10vw;
+    top: 58px;
+    left: 0;
+    //background-color: red;
+    z-index: 2000;
+  }
+  .scroll-content {
+    position: absolute;
+  }
+  .block-searchbar {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    min-height: 15vw;
+    height: 10vw;
+    top: 58px;
+    left: 0;
+    z-index: 3000;
+  }
+  .start-scroll {
+    position: absolute;
+    top: calc(20vw + 17vw);
+    right: 0;
+    left: 0;
+    width: auto;
+    height: 8vw;
+    z-index: 1000;
+    background: linear-gradient(1deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.548) 47%, rgba(255, 255, 255, 0.888) 88%,  rgba(255,255,255,1) 100%);
+  }
+  .find-field {
+    position: relative;
+    left: 0;
+    width: 99%;
+    height: 10vw;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5vw;
+    z-index: 11;
+  }
+  .pin-icon-input { 
+    position: absolute;
+    left: calc(8vw - 0.5vh) !important;
+    top:  3.2vw !important;
+    background-size: 6vw;
+    width: 8vw !important;
+    height: 8vw !important;
+    background-image: url(./../../assets/icon/v2/ico_custom.png) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 100;
+  }
+  .autocomplete {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    background-color: transparent;
+    ion-searchbar {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 10vw;
+      min-height: 10vw;
+      background: transparent;
+      border: none;
+      .searchbar-input {
+        border-radius: 15px !important;
+        min-height: 10vw;
+        background-color: rgb(244, 244, 244);
+        box-shadow: none;
+        width: 95% !important;
+      }
+    }
+    ion-list {
+      position: absolute;
+      top: 15vw;
+      left: 0;
+      width: 94%;
+      overflow-y: scroll;
+      border-radius: 15px;
+      min-height: 20px;
+      margin-left: 5vw;
+      margin-right: 5vw;
+      ion-item {
+        background-color: #fff !important;
+        color: color($colors, azul);
+        font-family: 'Alatsi Regular';
+        font-size: 5vw;
+        min-height: 20px;
+      }
+    }
+    .searchbar-ios.searchbar-left-aligned .searchbar-input {
+      padding-left: 12vw;
+  }
+  .searchbar-md.searchbar-left-aligned .searchbar-input {
+    padding-left: 12vw;
+}
+    .searchbar-md .searchbar-input {
+      line-height: 0;
+    }
+    .searchbar-input-container {
+      position: absolute;
+      display: block;
+      -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+      width: 99%;
+      margin-top: 2vw;
+      margin-left: 2vw;
+      margin-right: 2vw;
+      top: 0;
+    }
+    .item-ios {
+      height: 62px;
+    }
+    .searchbar-md .searchbar-input {
+      padding: 6px 36px;
+      font-family: 'Alatsi Regular';
+      font-size: 5vw;
+    }
+    .searchbar-ios .searchbar-input {
+      font-family: 'Alatsi Regular';
+      font-size: 5vw;
+    }
+  }
+  .block-actions {
+    position: relative;
+    width: 100%;
+    top: 5vw;
+    left: 0;
+    background-color: white;
+  }
+  .action-buttons {
+    position: relative;
+    left: 0;
+    top: 3vw;
+    width: 100%;
+    height: 25vw;
+    min-height: 20vw;
+    text-align: center;
+  }
+  .qrcode {
+    position: relative;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: #eff0f2;
+    background-image: url(./../../assets/icon/v2/qrcode_ico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+  }
+  .favourites {
+    position: relative;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: #eff0f2;
+    background-image: url(./../../assets/icon/v2/favourite_ico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+  }
+  .near {
+    position: relative;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: #eff0f2;
+    background-image: url(./../../assets/icon/v2/locate_ico.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+  }
+  .title-action {
+    position: relative;
+    top: 14vw;
+    font-family: 'Alatsi Regular';
+    color: color($colors, chumbo);
+    font-size: 2.5vw;
+    display: inline-block;
+  }
+  .block-suggestions {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: calc(20vw + 18vw + 58px);
+    left: 0;
+    z-index: 1000;
+  }
+  .suggestions {
+    position: relative;
+    top: 6vw;
+    left: 0;
+    width: 100%;
+  }
+  .suggestions-h4 {
+    font-family: 'Alatsi Regular';
+    margin-left: 3vw;
+  }
+  .listprops {
+    position: relative;
+    left: 5px;
+    margin-right: 10px;
+    height: 57vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+  }
+  .thumb-content {
+    position: relative;
+    top: 0;
+    margin-right: 10px;
+  }
+  .block-map {
+    position: absolute;
+    width: 100%;
+    height: 125vw;
+    top: calc(57vw + 54vw + 58px);
+    left: 0;
+    z-index: inherit;
+  }
+  .map-content {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  .subtitles-map {
+    position: relative;
+    width: 100%;
+    height: 5.9vw;
+    margin-left: 4vw;
+  }
+  .sub-pin {
+    position: relative;
+    background-color: aliceblue;
+    height: 5.9vw;
+    font-family: 'Alatsi Regular';
+    font-size: 4vw;
+    color: color($colors, azul);
+    text-align: right;
+    border-radius: 3vw;
+    width: 33%;
+    padding-right: 2vw;
+    margin-right: 4vw;
+    float: left;
+  }
+  .img-pin {
+    position: absolute;
+    top: -0.7vh;
+    left: -1vw;
+    width: 8vw;
+    height: 6vh;
+    background-image: url(./../../assets/icon/v2/home_ico_yellow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .img-bro {
+    position: absolute;
+    top: -0.7vh;
+    left: 0;
+    width: 8vw;
+    height: 6vh;
+    background-image: url(./../../assets/icon/v2/user_ico_yellow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #map {
+    position: relative;
+    top:0;
+    left:3vw;
+    right: 2vw;
+    border-radius: 3vw;
+    width: 94%;
+    height: 130vw;
+  }
+
+
+
+
+
+
+
+
+
+
+  ion-header .toolbar .toolbar-title {  
+    color: color($colors, branco) !important;
+    font-size: 8vw;
+    text-align: center;
+  }
+  ion-header {
+    .toolbar {
+      position: absolute;
+      .toolbar-background {
+        //background: color($colors, azul) !important;
+        background-image:
+            linear-gradient(
+              to right, 
+              color($colors, azul), #407799
+        );
+      }
+      .toolbar-title {
+        color: color($colors, branco);
+      }
+    }
+  }
+
+
+
+
+
+  p {
+    color: #fff;
+  }
+  .logomenu {
+    background-color: color($colors, azul);
+    max-width: 40%;
+  }
+  .item-block {
+    line-height: none !important;
+  }
+  .list-ios .item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .item-ios.item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .list-md .item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .item-md.item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .item-md {
+    background: none;
+    color: color($colors, azul);
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+  [icon-left] ion-icon, [icon-start] ion-icon {
+    font-size: 1.4em !important;
+  }
+  .item-md.activated {
+    background: none;
+  }
+  .item-ios {
+    background: none;
+    color: color($colors, azul);
+    font-size: 3vw;
+    line-height: 4vw;
+    color: white;
+  }
+  .item-ios.activated {
+    background: none;
+  }
+ 
+
+  
+  .btn-fav {
+    position: absolute;
+    top: -4px;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 6vw;
+    z-index: inherit;
+    background-color: color($colors, azul);
+  }
+  .fav-icon-home {
+    padding-top: 0.5rem;
+    font-size: 2.3em;
+    line-height: .67;
+    pointer-events: none;
+  }
+
+ 
+  
+
+  .searchbar-search-icon { 
+   display: none;
+  }
+
+  
+  .blue {
+    background-color: color($colors, azul);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+ 
+  .gray {
+    // background-color: rgb(247, 247, 247);
+  }
+  
+  .find-field-custom {
+    position: relative;
+    top: -5px;
+    left: -10px;
+    width: 107%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5vw;
+    //z-index: 11;
+  }
+  .filter-options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(110, 109, 109, 0.747);
+    z-index: 10;
+  }
+  .bg-filter {
+    position: relative;
+    top: 45px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    height: 400px;
+    background-color: color($colors, azul);
+    border-radius: 10px;
+  }
+  
+ 
+  
+  .marker-pin {
+    background-image: url(./../../assets/icon/v2/home_ico.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  .marker-bro {
+    background-image: url(./../../assets/icon/v2/user_ico.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+  }
+  .mapboxgl-popup {
+    max-width: 70vw;
+    height: 110px;
+  }
+  .mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Alatsi Regular';
+    //font-size: 1em;
+    color: white;
+    background-color: color($colors, azul);
+    border-radius: 5px;
+    //border: 2px solid white;
+    filter: opacity(85%);
+  }
+  .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: color($colors, azul);
+  }
+  .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+    border-top-color: color($colors, azul);
+  }
+  .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+    border-top-color: color($colors, azul);
+  }
+  .mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-bottom-color: color($colors, azul);
+  }
+  .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
+    border-bottom-color: color($colors, azul);
+  }
+  .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+    border-bottom-color: color($colors, azul);
+  }
+  .mapboxgl-popup-close-button {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    border: 0;
+    border-radius: 0 3px 0 0;
+    cursor: pointer;
+    background-image: url(./../../assets/icon/v2/close_ico_yellow.png);
+    background-size: cover;
+    width: 3.5vh;
+    height: 3.5vh;
+    color: transparent;
+    z-index: 10000;
+ }
+  .img-thumb {
+    position: relative;
+    width: 46vw;
+    height: 42vw;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  .home-broker {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 58px);
+  }
+  .enable-broker {
+    position: fixed;
+    width: 90%;
+    min-height: 15vw;
+    height: 10vw;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    top: 76px;
+    left: 0;
+    z-index: 3000;
+  }
+  .bg-toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 10vw;
+    background-color: #F4F4F5;
+    border-radius: 15vw;
+    padding-top: 3vw;
+  }
+  .lbl_toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vw;
+    font-family: 'Alatsi Regular';
+    font-size: 4vw;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2.5vw;
+    z-index: 20000;
+  }
+  .toggle-off {
+    position: absolute;
+    top: 0.5vw;
+    left: 0.5vw;
+    width: 20%;
+    margin-left: 0.5vw;
+    height: 8.8vw;
+    background-color: color($colors, vermelho);
+    border-radius: 15vw;
+    z-index: 10000;
+  }
+  .icon-toggle-off {
+    position: relative;
+    top: -25%;
+    left: 70%;
+    width: 13.5vw;
+    height: 13.5vw;
+    background-color: color($colors, vermelho);
+    border: 2px solid color($colors, cinza);
+    background-image: url(./../../assets/icon/app-icon/17a.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15vw;
+  }
+  .toggle-on {
+    position: absolute;
+    top: 0.5vw;
+    left: 0.5vw;
+    width: 92%;
+    height: 8.8vw;
+    background-color: color($colors, verde);
+    border-radius: 15vw;
+    z-index: 10000;
+  }
+  .icon-toggle-on {
+    position: absolute;
+    top: -25%;
+    left: 92%;
+    width: 13.5vw;
+    height: 13.5vw;
+    background-color: color($colors, verde);
+    border: 2px solid color($colors, cinza);
+    border-radius: 15vw;
+    background-image: url(./../../assets/icon/app-icon/17a.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .tabs-broker {
+    position: relative;
+    top: 19vw;
+    left: 0;
+    width: calc(100% - 10vw);
+    height: 120vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .tab-item-broker {
+    position: relative;
+    top: 0;
+    left: 2vw;
+    right: 0;
+    width: 47%;
+    height: 25px;
+    text-align: center;
+    line-height: 13px;
+    font-family: 'Alatsi Regular';
+    color: color($colors, chumbo);
+    border-bottom: 0.5vw solid color($colors, chumbo);
+    font-size: 4vw;
+    float: left;
+  }
+  
+  .tab-separator {
+    position: absolute;
+    top: 0;
+    left: 49%;
+    width: 0.5vw;
+    height: 25px;
+    background-color: color($colors, chumbo);
+    z-index: 10000;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .category {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-family: "Alatsi Regular";
+    background-color: #ededed;
+    filter: opacity(0.9);
+    padding: 2px 4px 2px 4px;
+    border-radius: 7px;
+    color: color($colors, chumbo);
+    font-size: 2.7vw;
+    font-weight: bold;
+  }
+  .location {
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    font-family: "Alatsi Regular";
+    color: color($colors, azul);
+    font-size: 2.7vw;
+    font-weight: bold;
+  }
+  .modality {
+    position: absolute;
+    top: 5.2vw;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 2.8vw;
+    left: 7px;
+  }
+  .modality2 {
+    position: absolute;
+    top: 5.2vw;
+    left: 0;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 3.5vw;
+  }
+  .price {
+    position: absolute;
+    top: 4.5vw;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 4.2vw;
+    right: 6px;
+  }
+  .price2 {
+    position: absolute;
+    top: 0.5vw;
+    right: 0;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 3.5vw;
+    
+  }
+  .center-icons {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+  }
+  .group-icons {
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    width: 100%;
+
+  }
+  .space-group-icons {
+    position: relative;
+    top: 22vw;
+    width: 100%;
+  }
+  .icons {
+    position: relative;
+    width: 33%;
+    text-align: center;
+    //bottom: 0;
+    float: left;
+    border: 0;
+  }
+  .icon-home-h {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/home_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+  }
+  .icon-home-b {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/bed_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-home-p {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/pet_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-home-c {
+    width: 10vw;
+    height: 10vw;
+    background-image: url(../../assets/icon/v2/car_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .area {
+    position: relative;
+    bottom: 0;
+    //left: 0;
+    width: auto;
+    display: inline-block;
+  }
+  .measure {
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 2.5vw;
+    position: relative;
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+  }
+  .thumb-details {
+    position: absolute;
+    top: 27vw;
+    left: 2px;
+    width: 45vw;
+    min-height: 28vw;
+    border-radius: 5px;
+    background-color: rgb(248, 244, 244);
+    filter: opacity(0.95);
+  }
+  h4 {
+    font-family: "Alatsi Regular";
+    color: color($colors, azul);
+    font-size: 6vw;
+  }
+  .bottom {
+    bottom: 0;
+  }
+  
+
+  .bg-bottom-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../../assets/imgs/bg-bottom-menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.7);
+
+  }
+  .bg-top-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: url(../../assets/imgs/bg-top-menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.7);
+
+  }
+  .logo-in-menu {
+    position: absolute;
+    top: 33px;
+    right: 20px;
+    width: 45%;
+    height: 100%;
+    background-image: url(../../assets/imgs/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  /*
+  Remove SearchBar from MapBox
+  */
+  .mapboxgl-ctrl-top-right {
+    display: none;
+  }
+  .mapboxgl-ctrl-attrib.mapboxgl-compact {
+    display: none;
+  }
+  .nolines {
+    background-color: transparent;
+  }
+  .ot-listprops {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 25vw;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .ot-img-schedule {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2vw;
+    z-index: 1000;
+    background-image: url(./../../assets/imgs/mansao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .ot-status-visit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: rgba(165, 42, 42, 0.774);
+    text-align: center;
+    line-height: 2.5vh;
+    font-family: "Alatsi Regular";
+    font-size: 2.2vw;
+    border-radius: 5px;
+  }
+  .ot-status-visit-ok {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.774);
+    text-align: center;
+    line-height: 2.5vh;
+    font-family: "Alatsi Regular";
+    font-size: 2.2vw;
+    border-radius: 5px;
+  }
+ 
+  .ot-info {
+    position: absolute;
+    width: 40%;
+    top: 0;
+    height: 25vw;
+    left: 30%;
+  }
+  .ot-info-broker {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    height: 25vw;
+    right: 0;
+  }
+  .ot-img-broker {
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 7vw;
+    height: 7vw;
+    background-image: url(./../../assets/imgs/mansao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4vw;
+    z-index: 1000;
+  }
+  .ot-name-broker {
+    position: absolute;
+    top: 7.5%;
+    left: 37%;
+    width: 100%;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 2.5vw;
+    text-align: left;
+  }
+  .ot-h-line {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 0.5vw;
+    background-color: color($colors, azul);
+    z-index: 1000;
+  }
+  .ot-v-line {
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    width: 0.5vw;
+    height: 14.6vw;
+    background-color: color($colors, azul);
+    z-index: 1000;
+  }
+  .ot-day {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    text-align: center;
+    width: 49%;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 6.6vw;
+    z-index: 1000;
+  }
+  .ot-month {
+    position: absolute;
+    bottom: 2vw;
+    left: 0;
+    width: 49%;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 3vw;
+    z-index: 1000;
+  }
+  .ot-hour {
+    position: absolute;
+    top: 50%;
+    left: 56%;
+    width: 10vw;
+    height: 10vw;
+    background-color: color($colors, azul);
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, branco);
+    font-size: 3vw;
+    padding-top: 3vw;
+    border-radius: 10vw;
+    z-index: 1000;
+    font-weight: bold;
+  }
+  .ot-prop-cat {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    line-height: 4vw;
+    width: auto;
+    border-radius: 3vw;
+    background-color: #EFF0F2;
+    color: color($colors, chumbo);
+    text-align: center;
+    font-family: "Alatsi Regular";
+    font-size: 3.5vw;
+    z-index: 1000;
+  }
+  .ot-prop-location {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./../../assets/icon/app-icon/13.png);
+    background-repeat: no-repeat;
+    background-size: 4.5vw;
+    background-position-x: left;
+    font-family: "Alatsi Regular";
+    font-size: 2.5vw;
+    color: color($colors, chumbo);
+    line-height: 5vw;
+    padding-left: 5vw;
+  }
+  .ot-prop-area {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    height: 55px;
+    top: 40px;
+    left: -5px;
+  }
+  .ot-icon-area {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: auto;
+    height: 20px;
+    background-image: url(./../../assets/icon/v2/home_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .ot-prop-room {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    height: 55px;
+    top: 40px;
+    left: 30px;
+  }
+  .ot-icon-room {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: auto;
+    height: 20px;
+    background-image: url(./../../assets/icon/v2/bed_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .ot-prop-pets {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    height: 55px;
+    top: 40px;
+    left: 65px;
+  }
+  .ot-icon-pets {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: auto;
+    height: 20px;
+    background-image: url(./../../assets/icon/v2/pet_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .ot-measure {
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 9px;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    top: 2px;
+  }
+  .ot-modality {
+    position: absolute;
+    top: 25px;
+    left: -5px;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 3vw;
+  }
+  .ot-price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 3.5vw;
+  }
+
+  /* // use in cadastro page or other pages that have input forms
+  .label-md[stacked] {
+    color: color($colors, chumbo);
+    font-weight: bold;
+  }
+  .label-md[stacked],
+  .label-md[floating] {
+    margin-left: 10px;
+  }
+  .label-ios[stacked],
+  .label-ios[floating] {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .item-input-has-focus .label-md[stacked],
+  .input-has-focus .label-md[stacked] {
+    color: color($colors, chumbo);
+    font-weight: bold;
+  }
+  .label-ios[stacked] {
+    color: color($colors, chumbo);
+    font-weight: bold;
+  }
+  .item-input-has-focus .label-ios[stacked],
+  .input-has-focus .label-ios[stacked] {
+    color: color($colors, chumbo);
+    font-weight: bold;
+  }
+  .text-input-ios {
+    border-radius: 4px;
+    border: 1px solid rgb(197, 196, 196);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(243, 244, 245);
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .text-input-md {
+    border-radius: 4px;
+    border: 1px solid rgb(197, 196, 196);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(243, 244, 245);
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .item-md {
+    //margin-bottom: -15px;
+    padding-right: 5px;
+    font-size: 1.5rem;
+    color: color($colors, azul);
+  }
+  .item-ios {
+    margin-bottom: -15px;
+    padding-right: 5px;
+    font-size: 1.3rem;
+  }
+  .list-md {
+    //margin: 145px 6px 25px;
+  }
+  .list-ios {
+    margin: 0px 7px 25px;
+  }
+  .item-label-stacked .text-input-md,
+  .item-label-floating .text-input-md {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 25px;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    padding-left: 35px;
+  }
+  .item-label-stacked .text-input-ios,
+  .item-label-floating .text-input-ios {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 25px;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    padding-left: 35px;
+  }
+  .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus)
+    .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md
+    .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md
+    .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+  .list-md
+    .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input.item-input-has-focus:last-child,
+  .list-md .item-input.input-has-focus:last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+    .item-inner,
+  .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+    .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .item-md.item-input.item-input-has-focus .item-inner,
+  .item-md.item-input.input-has-focus .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input:last-child {
+    border-bottom: none;
+  }
+  .content-md {
+    background: none !important;
+  } */
+
+  
+
+  .home-owner {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    scroll-behavior: smooth;
+   // background-color: aqua;
+    height: calc(100% - 58px);
+  }
+  
+ 
+  .tabs-owner {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 178px);
+  }
+  .tabs-re {
+    position: absolute;
+    top: 35vh;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 240px);
+  }
+  
+
+  
+  .tab-item-owner {
+    position: relative;
+    top: 0;
+    left: 2vw;
+    right: 2vw;
+    width: 48%;
+    height: 9vw;
+    text-align: center;
+    line-height: 9vw;
+    font-family: "Alatsi Regular";
+    color: color($colors, branco);
+    background-color: color($colors, azul);
+    border-right: 1px solid color($colors, branco);
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
+    font-size: 4vw;
+    float: left;
+  }
+  .tab-active {
+    background-color: color($colors, azul);
+    font-weight: bold;
+    font-size: 4vw;
+    height:10vw;
+    top: -1vw;
+    z-index: inherit;
+  }
+
+
+  .tab-item-re {
+    position: relative;
+    top: 0;
+    left: 2vw;
+    right: 2vw;
+    width: 98%;
+    height: 9vw;
+    text-align: center;
+    padding-top: 3vw;
+    font-family: "Alatsi Regular";
+    color: color($colors, branco);
+    background-color: color($colors, azul);
+    border-right: 1px solid color($colors, branco);
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
+    font-size: 4vw;
+    float: left;
+  }
+  
+  .tabs-content {
+    position: relative;
+    width: calc(100% + 8px);
+    height: calc(100% + 12vw);
+    padding: 8px 16px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -4px;
+  }
+  .tabs-content-broker {
+    position: relative;
+    width: calc(100% + 8px);
+    height: 48%;
+    padding: 8px 16px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -4px;
+  }
+  .clients-broker {
+    position: relative;
+    left: 0;
+    width: calc(100% - 24px);
+  }
+  .client-info {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: 18vw;
+    padding-left: 10vw;
+    background-color: color($colors, bege);
+    border-radius: 2vw;
+    margin-bottom: 16px;
+  }
+  .client-data {
+    position: absolute;
+    top: 1.2vw;
+    width: auto;
+    font-family: 'Alatsi Regular';
+    color: color($colors, chumbo);
+    font-size: 3vw;
+  }
+  .img-client {
+    position: absolute;
+    top: 1.5vw;
+    left: -7vw;
+    width: 15vw;
+    height: 15vw;
+    background-image: url(./../../assets/imgs/mansao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+  }
+  .deal-client {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 70px;
+    background-color: color($colors, vermelho);
+    border-radius: 5px;
+    padding-top: 15px;
+    font-family: "Alatsi Regular";
+    color: color($colors, branco);
+    font-size: 3.5vw;
+    text-align: center;
+  }
+  .hide-deal {
+    display: none;
+  }
+  .schedule-broker {
+    position: relative;
+    top: 5px;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .schedule-date {
+    position: relative;
+    top: 0;
+    width: auto;
+    height: 10vw;
+    background-color: color($colors, azul);
+    border-radius: 5px;
+  }
+  .schedule-data-info {
+    position: absolute;
+    top: calc(50% - 3vw);
+    left: 0;
+    width: 100%;
+    font-family: 'Alatsi Regular';
+    color: color($colors, branco);
+    font-size: 4.5vw;
+    font-weight: bold;
+    text-align: center;
+  }
+  .schedule-info {
+    position: relative;
+    top: 0;
+    margin: 3vw 0 0 0;
+    width: auto;
+    height: 15vw;
+    background-color: #EFF0F2;
+    border-radius: 2vw;
+  }
+  .schedule-hour-info {
+    position: absolute;
+    top: calc(50% - 4vw);
+    left: 0;
+    width: 28%;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 7vw;
+    font-weight: bold;
+  }
+  .schedule-client-info {
+    position: absolute;
+    top: calc(50% - 4.5vw);
+    left: 30%;
+    width: 69%;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 2.6vw;
+  }
+  .check-schedule {
+    position: absolute;
+    top: -2.5vw;
+    right: 0;
+    width: 7vw;
+    height: 7vw;
+    background-image: url(./../../assets/icon/app-icon/24.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .ads-broker {
+    position: relative;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ads-owner {
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 16vw);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .ads-re {
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .listprops2 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 25vw;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+    //background-color: aqua;
+  }
+  .img-schedule {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20vw;
+    height: 20vw;
+    background-image: url(./../../assets/imgs/mansao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3vw;
+    z-index: 1000;
+  }
+  .img-property {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2vw;
+    z-index: 1000;
+  }
+
+  .info {
+    position: absolute;
+    width: 68%;
+    top: 0;
+    height: 25vw;
+    right: 0;
+  }
+  .info-broker {
+    position: absolute;
+    width: 30%;
+    top: 0;
+    height: 80px;
+    right: 3px;
+  }
+  .prop-cat {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    line-height: 4vw;
+    width: auto;
+    border-radius: 3vw;
+    background-color: #EFF0F2;
+    color: color($colors, chumbo);
+    text-align: center;
+    font-family: "Alatsi Regular";
+    font-size: 3.5vw;
+    z-index: 1000;
+}
+  .prop-location {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./../../assets/icon/app-icon/13.png);
+    background-repeat: no-repeat;
+    background-size: 4.5vw;
+    background-position-x: left;
+    font-family: "Alatsi Regular";
+    font-size: 2.5vw;
+    color: color($colors, chumbo);
+    line-height: 5vw;
+    padding-left: 5vw;
+  }
+  .prop-area {
+    position: absolute;
+    //width: 30%;
+    text-align: center;
+    height: 55px;
+    top: 10vw;
+    left: 0;
+  }
+  .icon-area {
+    position: relative;
+    top: 5px;
+    width: auto;
+    height: 6vw;
+    background-image: url(./../../assets/icon/v2/home_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(6px, 0);
+
+  }
+  .prop-room {
+    position: absolute;
+    //width: 30%;
+    text-align: center;
+    height: 55px;
+    top: 10vw;
+    left: calc(50% - 13px);
+  }
+  .icon-room {
+    position: relative;
+    top: 5px;
+    width: auto;
+    height: 6vw;
+    background-image: url(./../../assets/icon/v2/bed_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(6px, 0);
+
+  }
+  .prop-pets {
+    position: relative;
+    width: 33%;
+    text-align: center;
+    height: 55px;
+    top: 10vw;
+    left: calc(100% - 26px);
+    background-color: aqua;
+  }
+  .icon-pets {
+    position: relative;
+    top: 0px;
+    height: 6vw;
+    background-image: url(./../../assets/icon/v2/pet_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(6px, 0);
+
+  }
+  .measure2 {
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 3vw;
+    top: 6px; 
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .line-sep {
+    bottom: -10px;
+    right: 10px;
+    width: 67%;
+    height: 1px;
+    position: absolute;
+    background-color: #EFF0F2;
+  }
+  .add-property {
+    position: absolute;
+    bottom: -20px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background-image: url(./../../assets/icon/app-icon/32.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: inherit;
+  }
+  .toggle-owner {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    height: 60px;
+  }
+  .toggle-realestate {
+    position: relative;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  .toggle-property {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: color($colors, cinza);
+  }
+  .toggle-active {
+    background-color: color($colors, verde) !important;
+  }
+  .ico-toggle-property {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-image: url(./../../assets/icon/v2/home_ico.png);
+    border-radius: 25px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .ico-toggle-broker {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-image: url(./../../assets/icon/v2/user_ico.png);
+    border-radius: 25px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .ico-toggle-star {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-image: url(./../../assets/icon/v2/star_ico.png);
+    border-radius: 25px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .toggle-schedule {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: color($colors, cinza);
+  }
+  .toggle-lbl-property {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 12px;
+    text-align: center;
+  }
+  .ico-toggle-schedule {
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-image: url(./../../assets/icon/v2/schedule_ico.png);
+    border-radius: 25px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .toggle-num-property {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 100%;
+    font-family: "Alatsi Regular";
+    color: color($colors, branco);
+    font-size: 25px;
+    text-align: right;
+  }
+  .toggle-lbl-schedule {
+    position: absolute;
+    top: 55px;
+    left: 5px;
+    right: 5px;
+    width: auto;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 12px;
+    text-align: center;
+  }
+  .toggle-num-schedule {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 100%;
+    font-family: "Alatsi Regular";
+    color: color($colors, branco);
+    font-size: 25px;
+    text-align: right;
+  }
+  .action-offline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.616);
+    z-index: 2000;
+    border-radius: 2vw;
+  }
+  .title-offline {
+    position: absolute;
+    top: 1.5vw;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Alatsi Regular";
+    color: color($colors, vermelho);
+    font-size: 5vw;
+   
+    font-weight: bold;
+  }
+  .descr-offline {
+    position: absolute;
+    top: 7vw;
+    left: 0;
+    width: 100%;
+    //line-height: 8px;
+    font-family: "Alatsi Regular";
+    color: color($colors, chumbo);
+    font-size: 3.5vw;
+    text-align: center;
+    font-weight: bold;
+  }
+  .bt {
+    position: absolute;
+    bottom: 1vw;
+    background-color: color($colors, vermelho);
+    border-radius: 7px;
+    font-family: "Alatsi Regular";
+    font-size: 4vw;
+    text-decoration: none;
+    color: color($colors, branco);
+    width: 100%;
+    height: 6vw;
+    font-weight: bold;
+  }
+}
+.ios {
+  .showpin {
+    position: absolute;
+    font-size: 8vw;
+    left: 35px;
+    top: 26px;
+  }
+  .showopt {
+    position: absolute;
+    font-size: 6vw;
+    right: 37px;
+    top: 30px;
+  }
+}
+.md {
+  .showpin {
+    position: absolute;
+    font-size: 8vw;
+    left: 35px;
+    top: 29px;
+  }
+  .showopt {
+    position: absolute;
+    font-size: 6vw;
+    right: 40px !important;
+    top: 32px;
+  }
+}
+
+.ion-page > ion-content{
+  // background-color: #FAFAFA !important;
+}
+
+.content-schedule {
+  position: relative;
+  bottom: 0;
+  overflow-y: scroll;
+  height: calc(50vw - 2vh);
+}
+
+.schedule-data-info-title {
+  font-family: 'Alatsi Regular';
+  font-size: 5vw;
+  position: absolute;
+  top: -6.5vw;
+  color: color($colors, chumbo);
+}
+ion-header button,
+.back-button {
+  position: absolute !important;
+  z-index: 5;
+}
+
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 90px 1px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+.list.list-md {
+  box-shadow: none;
+}
+
+.searchbar-clear-icon {
+  margin-right: 20px;
+  color: #FBFBFB;
+}

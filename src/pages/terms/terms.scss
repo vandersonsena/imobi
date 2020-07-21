@@ -1,0 +1,57 @@
+page-terms {
+    .bar-button-default-ios {
+        color: white;
+    }
+    .bar-button-default-md {
+        color: white;
+    }  
+    ion-header .toolbar .toolbar-title {
+        color: white !important;
+        font-family: 'Alatsi Regular';
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    ion-header {
+        .toolbar {
+          position: absolute;
+          .toolbar-background {
+            //background: color($colors, azul) !important;
+            background-image:
+                linear-gradient(
+                  to right, 
+                  color($colors, azul), #407799
+            );
+          }
+          .toolbar-title {
+            color: color($colors, branco);
+          }
+        }
+      }
+   
+    
+    .masters {
+      position: relative;
+      top: 58px; 
+        background-color: white;
+        font-family: 'Alatsi Regular';
+        color: color($colors, azul);
+    }
+
+   
+   
+    .links {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        float: left;
+        top: 40px;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+   
+    
+    
+}

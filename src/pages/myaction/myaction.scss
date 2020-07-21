@@ -1,0 +1,148 @@
+page-myaction {
+  .header-start {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    justify-content: center;
+    text-align: center;
+  }
+  .ma-logo {
+    max-width: 60%;
+  }
+  .masters {
+    display: flex;
+    flex: 1;
+    background-color: color($colors, azul);
+  }
+  #bt1 {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px color($colors, branco) solid;
+    font-family: 'Montserrat Regular';
+    font-size: 20px;
+    color: color($colors, branco);
+    font-weight: bold;
+    //padding-left: 3vw !important;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: left;
+    width: 70%;
+    height: 8.5vh;
+    margin-bottom: 15px;
+    /*background-image: url("./../../assets/icon/v2/fav_icon_yellow.png");
+    background-repeat: no-repeat;
+    background-size: contain;*/
+  }
+  #bt2 {
+    //position: relative;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px color($colors, branco) solid;
+    font-family: 'Montserrat Regular';
+    font-size: 20px;
+    color: color($colors, branco);
+    font-weight: bold;
+    //padding-left: 3vw !important;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: left;
+    width: 70%;
+    height: 8.5vh;
+    margin-bottom: 15px;
+    /*background-image: url("./../../assets/icon/v2/acesso.png");
+    background-repeat: no-repeat;
+    background-size: contain;*/
+  }
+  #bt3 {
+    //position: relative;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px color($colors, branco) solid;
+    font-family: 'Montserrat Regular';
+    font-size: 20px;
+    color: color($colors, branco);
+    font-weight: bold;
+    //padding-left: 3vw !important;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: left;
+    width: 70%;
+    height: 8.5vh;
+    margin-bottom: 15px;
+    /*background-image: url("./../../assets/icon/v2/user_ico_yellow.png");
+    background-repeat: no-repeat;
+    background-size: contain;*/
+  }
+  #bt4 {
+    //position: relative;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 2px color($colors, branco) solid;
+    font-family: 'Montserrat Regular';
+    font-size: 20px;
+    color: color($colors, branco);
+    font-weight: bold;
+    //padding-left: 3vw !important;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: left;
+    width: 70%;
+    height: 8.5vh;
+    margin-bottom: 15px;
+    /*background-image: url("./../../assets/icon/v2/home_ico_yellow.png");
+    background-repeat: no-repeat;
+    background-size: contain;*/
+  }
+
+  .btns img {
+    width: 38px;
+    height: 38px;
+    margin-right: 15px;
+  }
+
+  .maps-moving {
+    background-image: url("./../../assets/imgs/maps.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.2);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: slide 40s linear infinite;
+  }
+  @-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -1200px 0; }
+  }
+  .button-md {
+    text-transform: none;
+  }
+  .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.5vw;
+  }
+}

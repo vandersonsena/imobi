@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >Agendamentos</ion-title>
+  </ion-navbar> 
+</ion-header>
+
+<ion-content  class="masters" >
+   
+      <div class="suggestions">
+        <h4 class="suggestions-h4">Próximos</h4>
+          
+        <div  *ngFor="let age of ARR_ITEMS" class="listprops">
+            <div class="img-schedule"><div class="status-visit">Visita Confirmada</div></div>
+            <div class="info">
+              <div class="prop-cat">{{ age.alias }}</div>
+              <div class="prop-location"> {{ age.neighboor }}</div>
+              <div class="prop-area">
+                <div class="icon-area"></div>
+                <div class="measure">{{ age.area }} m²</div>
+              </div>
+              <div class="prop-room">
+                <div class="icon-room"></div>
+                <div class="measure">{{ age.rooms }} dorms</div>
+              </div>
+              <div class="prop-pets">
+                <div class="icon-pets"></div>
+                <div class="measure">Sim</div>
+              </div>
+              <div class="modality">{{ age.modality }}</div>
+              <div class="price">R$ {{ age.price }}</div>
+            </div>
+            <div class="info-broker">
+              <div class="img-broker"></div>
+              <div class="name-broker"><strong>CORRETOR</strong><br>{{ age.broker }}</div>
+              <div class="h-line"></div>
+              <div class="v-line"></div>
+              <div class="day">{{ age.day_visit }}</div>
+              <div class="month">{{ age.month_visit }}</div>
+              <div class="hour">{{ age.hour_visit }}</div>
+            </div>
+          </div>
+           
+          
+
+      </div>
+
+      <div class="separator">
+        <div class="line"></div>
+      </div>
+
+      <div class="suggestions">
+        <h4 class="suggestions-h4">Anteriores</h4>
+          
+        <div  *ngFor="let age of ARR_ITEMS" class="listprops">
+            <div class="img-schedule"><div class="status-visit">Visita Confirmada</div></div>
+            <div class="info">
+              <div class="prop-cat">{{ age.alias }}</div>
+              <div class="prop-location"> {{ age.neighboor }}</div>
+              <div class="prop-area">
+                <div class="icon-area"></div>
+                <div class="measure">{{ age.area }} m²</div>
+              </div>
+              <div class="prop-room">
+                <div class="icon-room"></div>
+                <div class="measure">{{ age.rooms }} dorms</div>
+              </div>
+              <div class="prop-pets">
+                <div class="icon-pets"></div>
+                <div class="measure">Sim</div>
+              </div>
+              <div class="modality">{{ age.modality }}</div>
+              <div class="price">R$ {{ age.price }}</div>
+            </div>
+            <div class="info-broker">
+              <div class="img-broker"></div>
+              <div class="name-broker"><strong>CORRETOR</strong><br>{{ age.broker }}</div>
+              <div class="h-line"></div>
+              <div class="v-line"></div>
+              <div class="day">{{ age.day_visit }}</div>
+              <div class="month">{{ age.month_visit }}</div>
+              <div class="hour">{{ age.hour_visit }}</div>
+            </div>
+          </div>
+            
+      </div>
+    
+</ion-content>

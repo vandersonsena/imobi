@@ -1,0 +1,33 @@
+<ion-content class="masters">
+  <button class="btn-back" ion-button icon-only (click)="dismiss()">
+    <ion-icon name="close" color="branco"></ion-icon>
+  </button>
+  <ion-slides paginationClickable=true
+              initialSlide="{{currentIndex}}"
+              loop=true
+              autoplay=5000
+              speed=2000
+              #mySlider
+              class="main_view"
+              (ionSlideDidChange)="slideChanged()">
+
+    <ion-slide *ngFor="let item of images" class="home-slide">
+
+      <div class="img-slide" [style.background-image]="'url(' + item.urlimage + ')'"></div>
+      
+    </ion-slide>
+  </ion-slides> 
+
+  <ion-slides paginationClickable=true
+    slidesPerView=2
+    loop=true
+    speed=2000
+    spaceBetween=5
+    #mySlider
+    class="view_next">
+
+    <ion-slide *ngFor="let item of images" class="home-slide">
+      <div class="img-slide" [style.background-image]="'url(' + item.urlimage + ')'"></div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,109 @@
+<ion-header>
+        <ion-navbar >
+          <ion-title>{{ profile }}</ion-title>
+        </ion-navbar> 
+        <div class="numbers">
+                <div class="bg-num">
+                    <div class="num">1</div>
+                    <div class="num">2</div>
+                    <div class="num-out">3</div>
+                    <div class="num-out">4</div>
+                 </div>
+            </div>
+      </ion-header>
+    
+    <ion-content  padding class="masters">
+    
+        <div class="footer-frm">
+            <form [formGroup]="form">
+                <ion-list radio-group no-lines>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.description.valid || (!form.controls.description.dirty && !submitAttempt)" color="light" stacked>Conte mais sobre o imóvel:</ion-label>
+                        <ion-label *ngIf="!form.controls.description.valid && (form.controls.description.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Preencha a descrição!</strong></ion-label>
+                        <ion-textarea placeholder="ex: Lindo apto com varanda gourmet..." name="description" formControlName="description"></ion-textarea>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.area.valid || (!form.controls.area.dirty && !submitAttempt)" color="light" stacked>Área útil (m²):</ion-label>
+                        <ion-label *ngIf="!form.controls.area.valid && (form.controls.area.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe a área útil!</strong></ion-label>
+                        <ion-input maxlength="8" formControlName="area" type="text"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.rooms.valid || (!form.controls.rooms.dirty && !submitAttempt)" color="light" stacked>Dormitórios:</ion-label>
+                        <ion-label *ngIf="!form.controls.rooms.valid && (form.controls.rooms.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione o nº de dormitórios!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="rooms">
+                            <ion-option value="1">1</ion-option>
+                            <ion-option value="2">2</ion-option>
+                            <ion-option value="3">3</ion-option>
+                            <ion-option value="4">4</ion-option>
+                            <ion-option value="5">5</ion-option>
+                            <ion-option value="6">6</ion-option>
+                            <ion-option value="7">7</ion-option>
+                            <ion-option value="8">8</ion-option>
+                            <ion-option value="9">9</ion-option>                           
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.suits.valid || (!form.controls.suits.dirty && !submitAttempt)" color="light" stacked>Quantas Suítes possui?</ion-label>
+                        <ion-label *ngIf="!form.controls.suits.valid && (form.controls.suits.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione o nº de suítes!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="suits">
+                            <ion-option value="0" selected>Sem Suítes</ion-option>
+                            <ion-option value="1">1</ion-option>
+                            <ion-option value="2">2</ion-option>
+                            <ion-option value="3">3</ion-option>
+                            <ion-option value="4">4</ion-option>
+                            <ion-option value="5">5</ion-option>
+                            <ion-option value="6">6</ion-option>
+                            <ion-option value="7">7</ion-option>
+                            <ion-option value="8">8</ion-option>
+                            <ion-option value="9">9</ion-option>                           
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.bathrooms.valid || (!form.controls.bathrooms.dirty && !submitAttempt)" color="light" stacked>Banheiros:</ion-label>
+                        <ion-label *ngIf="!form.controls.bathrooms.valid && (form.controls.bathrooms.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione o nº de banheiros!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="bathrooms">
+                            <ion-option value="1">1</ion-option>
+                            <ion-option value="2">2</ion-option>
+                            <ion-option value="3">3</ion-option>
+                            <ion-option value="4">4</ion-option>
+                            <ion-option value="5">5</ion-option>
+                            <ion-option value="6">6</ion-option>
+                            <ion-option value="7">7</ion-option>
+                            <ion-option value="8">8</ion-option>
+                            <ion-option value="9">9</ion-option>                           
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.furniture.valid || (!form.controls.furniture.dirty && !submitAttempt)" color="light" stacked>Mobília:</ion-label>
+                        <ion-label *ngIf="!form.controls.furniture.valid && (form.controls.furniture.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Possui mobília?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="furniture">
+                            <ion-option value="0">Não Mobiliado</ion-option>
+                            <ion-option value="1">Mobiliado</ion-option>                         
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.keytype.valid || (!form.controls.keytype.dirty && !submitAttempt)" color="light" stacked>Tipos de Chave:</ion-label>
+                        <ion-label *ngIf="!form.controls.keytype.valid && (form.controls.keytype.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione o tipo de chave!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="keytype">
+                            <ion-option value="1">Chave</ion-option>
+                            <ion-option value="2">Senha</ion-option>
+                            <ion-option value="3">Biometria</ion-option>                         
+                        </ion-select> 
+                    </ion-item>
+                </ion-list>
+            </form>
+        </div>
+    </ion-content>
+    
+    <ion-footer>
+        <ion-toolbar color="azul">
+           <!--  <button id="btback" ion-button block icon-left type="submit">
+                <ion-icon name="arrow-dropleft-circle"></ion-icon>
+                VOLTAR
+            </button> -->
+            <button id="btok" ion-button block icon-right type="button" (click)="submitProperty()">
+                AVANÇAR
+                <ion-icon name="arrow-dropright-circle"></ion-icon>
+            </button>
+        </ion-toolbar>
+      </ion-footer>

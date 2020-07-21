@@ -1,0 +1,8 @@
+{
+  "name": "ImobiPlaces",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "app_id": ""
+}

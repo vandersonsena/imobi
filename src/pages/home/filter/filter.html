@@ -1,0 +1,50 @@
+<ion-content class="masters">
+  <div class="main">
+    <button class="btn-close" ion-button icon-only (click)="cancel()">
+      <ion-icon name="close" color="amarelo"></ion-icon>
+    </button>
+    <ion-list>
+      <ion-item>
+        <ion-label>Quero comprar</ion-label>
+        <ion-checkbox color="amarelo" (click)="selectReason(2)" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Quero alugar</ion-label>
+        <ion-checkbox color="amarelo" (click)="selectReason(1)" checked="false"></ion-checkbox>
+      </ion-item>
+      <ion-item class="nolines">
+        <ion-label stacked>Imóvel:</ion-label>
+        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" [(ngModel)]="filters.catid">
+            <ion-option *ngFor="let cat of categories" [value]="cat.catid">{{ cat.alias }}</ion-option>                           
+        </ion-select>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+              <ion-item class="nolines" >
+                  <ion-label stacked>Dorms.</ion-label>
+                  <ion-input color="amarelo" [(ngModel)]="filters.rooms" type="tel" max-length="2"></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col col-6>
+              <ion-item class="nolines" >
+                  <ion-label stacked>Banheiros</ion-label>
+                  <ion-input color="amarelo" [(ngModel)]="filters.bathrooms" type="tel" max-length="2"></ion-input>
+              </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <ion-label color="light" stacked>Valor Aproximado:<br>{{ lowPrice | currency: 'R$' : 'symbol' : '1.2-2' : 'pt' }} a {{ highPrice | currency: 'R$' : 'symbol' : '1.2-2' : 'pt' }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-range (ionChange)="setKnobs(knobValues);" dualKnobs="true" min="50000" max="20000000" [(ngModel)]="knobValues" step="50000" pin="true" color="azul"></ion-range>
+      </ion-item>
+    </ion-list>
+    <div class="btn-schedule">
+      <button id="btw" type="button" ion-button (click)='filter();'>
+        CONFIRMAR
+      </button>
+    </div>
+  </div>
+</ion-content>

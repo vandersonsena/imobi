@@ -1,0 +1,665 @@
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+  display: none !important;
+}
+page-details {
+
+    .itemPosicao {
+        text-align: center;
+    }
+    .masters {
+        background-color: color($colors, branco);
+        color: white;
+    }
+    .img-slide {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 64.3vh;
+    }
+    
+    .slide-zoom {
+        text-align: center;
+        display: block;
+        width: 100%;
+        top: 0px;
+        position: fixed;
+    }
+   
+    #tv {
+        position: fixed;
+        z-index: 1000;
+        top: 55%;
+        left: 0;
+        width: 100%;
+        height: 31vw;
+        background: color($colors, branco);
+        border-radius: 500px /120px;
+      } 
+      .prop-details {
+          position: fixed;
+          top: 50%;
+          left: 10px;
+          right: 10px;
+          width: auto;
+          height: inherit;
+          bottom: 20px;
+          background-color: white;
+          border-radius: 5px;
+          z-index: 1000;
+      }
+      .btn-actions {
+          position: fixed;
+          bottom: 20px;
+          width: auto;
+          left: 10px;
+          right: 10px;
+          text-align: center;
+          z-index: inherit;
+      }
+      .visit-loading {
+        position: fixed;
+        bottom: 23px;
+        width: 50%;
+        right: 0;
+        padding-right: 15px;
+        text-align: center;
+        z-index: inherit;
+      }
+      .btn-schedule {
+        position: absolute;
+        bottom: 20px;
+        width: auto;
+        left: 10px;
+        right: 10px;
+        text-align: center;
+      }
+      .datetime-text {
+        display: none !important;
+      }
+      .bt {
+        background-color: color($colors, azul); 
+        border-radius: 32px;
+        border: 2px color($colors, azul) solid;
+        font-family: "Alatsi Regular"; 
+        //font-weight: bold;
+        font-size: 17px;
+        text-decoration: none;
+        color: color($colors, branco);
+        width: 45%;
+    }
+    .btg {
+      background-color: color($colors, verde); 
+      border-radius: 32px;
+      border: 2px color($colors, azul) solid;
+      font-family: "Alatsi Regular"; 
+      //font-weight: bold;
+      font-size: 17px;
+      text-decoration: none;
+      color: color($colors, branco);
+      width: 45%;
+  }
+  .btr {
+    background-color: color($colors, vermelho); 
+    border-radius: 32px;
+    border: 2px color($colors, azul) solid;
+    font-family: "Alatsi Regular"; 
+    //font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    color: color($colors, branco);
+    width: 45%;
+}
+    #btw {
+      background-color: transparent; 
+      border-radius: 7px;
+      border: 2px color($colors, branco) solid;
+      font-family: "Alatsi Regular"; 
+     
+      font-size: 15px;
+      text-decoration: none;
+      color: color($colors, branco);
+      width: 50%;
+  }
+  #btc {
+    background-color: transparent; 
+    border-radius: 7px;
+    border: 2px color($colors, branco) solid;
+    font-family: "Alatsi Regular"; 
+    
+    font-size: 15px;
+    text-decoration: none;
+    color: color($colors, branco);
+    width: 45%;
+  }
+    .btn-route {
+        position: absolute;
+        top: -8vw;
+        right: 5px;
+        width: 12vw;
+        height: 12vw;
+        z-index: inherit;
+        border-radius: 6vw;
+        background-color: color($colors, azul);
+    }
+    .btn-back {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: color($colors, azul);
+      z-index: 1000;
+  }
+  .btn-close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    z-index: 1000;
+}
+    .btn-fav {
+        position: absolute;
+        top: -8vw;
+        right: 15vw;
+        width: 12vw;
+        height: 12vw;
+        border-radius: 6vw;
+        z-index: inherit;
+        background-color: color($colors, azul);
+    }
+    .fav-icon {
+        font-size: 7vw;
+        //text-shadow: 1px 0.5px color($colors, cinza);
+    }
+    .btn-zoom {
+        position: absolute;
+        top: -23vw;
+        right: 5px;
+        width: 12vw;
+        height: 12vw;
+        border-radius: 6vw;
+        background-color: color($colors, azul);
+    }
+    .scroll-details {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 100%;
+      padding-top: 5px;
+      height: 100%;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
+    .start-scroll {
+      position: absolute;
+      top: 0px; 
+      right: 0px;
+      left: 0px;
+      width: auto;
+      height: 30px;
+      z-index: 10;
+      border-radius: 5px;
+      //background-color: aqua;
+      background: linear-gradient(1deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9150035014005602) 47%, rgba(255,255,255,1) 100%);
+    }
+    .end-scroll {
+      position: fixed;
+      bottom: 10px;
+      left: 20px;
+      right: 20px;
+      width: auto;
+      height: 100px;
+      z-index: inherit;
+      border-radius: 5px;
+      background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9150035014005602) 29%, rgba(255,255,255,1) 100%);
+    }
+    .prop-cat {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        line-height: 5vw;
+        width: auto;
+        border-radius: 4vw;
+        background-color: color($colors, cinza);
+        color: color($colors, chumbo);
+        text-align: center;
+        z-index: 1000;
+        font-family: "Alatsi Regular"; 
+        font-size: 4vw;
+    }
+    .prop-location {
+        position: absolute;
+        top: 8vw;
+        right: 10px;
+        background-image: url(./../../assets/icon/app-icon/13.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: left;
+        font-family: "Alatsi Regular"; 
+        font-size: 4.5vw;
+        color: color($colors, chumbo);
+        line-height: 3vh;
+        padding-left: 25px;
+      }
+      .swiper-button-next {
+        top: 20% !important;
+        right: 5%;
+      }
+      .swiper-button-prev {
+        top: 20% !important;
+        left: 5%;
+      }
+      .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        //filter: hue-rotate(199deg);
+        filter: brightness(1.2);
+      }
+      .swiper-button-prev, .swiper-container-rtl .swiper-button-prev {
+        //filter: hue-rotate(199deg);
+        filter: brightness(1.2);
+      }
+
+      .group-icons {
+        position: relative;
+        top: 15vw;
+        text-align: center;
+        width: 50%;
+    
+      }
+      .group-details {
+        position: relative;
+        top: 20vw;
+        text-align: center;
+        width: 50%;
+    
+      }
+      .group-broker {
+        position: inherit;
+        top: -14.5vw;
+        left: 35%;
+        width: 50%;
+        min-height: 12vw;
+        display: inline-block;
+      }
+      .broker-width {
+        top: 0;
+        position: relative;
+        width: 200% !important;
+      }
+      .icons {
+        position: relative;
+        width: 33%;
+        text-align: center;
+        float: left;
+        border: 0;
+      }
+      .details {
+        position: relative;
+        width: 100%;
+        float: left;
+        border: 0;
+        height: 8vw
+      }
+      .icon-home-h {
+        width: 10vw;
+        height: 10vw;
+        background-image: url(../../assets/icon/v2/home_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0;
+      }
+      .icon-home-b {
+        width: 10vw;
+        height: 10vw;
+        background-image: url(../../assets/icon/v2/bed_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .icon-home-p {
+        width: 10vw;
+        height: 10vw;
+        background-image: url(../../assets/icon/v2/pet_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .icon-home-c {
+        width: 10vw;
+        height: 10vw;
+        background-image: url(../../assets/icon/v2/car_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .area {
+        position: relative;
+        bottom: 0;
+        //left: 0;
+        width: auto;
+        display: inline-block;
+      }
+      .measure {
+        font-family: "Alatsi Regular";
+        color: color($colors, chumbo);
+        font-size: 2.5vw;
+        position: relative;
+        bottom: 0;
+        display: inline-block;
+        width: 100%;
+      }
+
+
+      .prop-area {
+        position: absolute;
+        width: 35px;
+        text-align: center;
+        height: 55px;
+        top: 50px;
+        left: 10px;
+        //padding-left: 5px;
+        //padding-right: 5px;
+      }
+      .icon-area {
+        position: relative;
+        top: 5px;
+        width: auto;
+        height: 35px;
+        background-image: url(./../../assets/icon/v2/home_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .prop-room {
+        position: absolute;
+        width: 35px;
+        text-align: center;
+        height: 55px;
+        top: 50px;
+        left: 53px;
+        //padding-left: 5px;
+        //padding-right: 5px;
+      }
+      .icon-room {
+        position: relative;
+        top: 5px;
+        width: auto;
+        height: 35px;
+        background-image: url(./../../assets/icon/v2/bed_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .prop-pets {
+        position: absolute;
+        width: 35px;
+        text-align: center;
+        height: 55px;
+        top: 50px;
+        left: 95px;
+      }
+      .icon-pets {
+        position: relative;
+        top: 5px;
+        width: auto;
+        height: 35px;
+        background-image: url(./../../assets/icon/v2/pet_ico_yellow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .modality {
+        position: absolute;
+        top: 13vw;
+        right: 10px;
+        width: 50%;
+        text-align: right;
+        font-family: "Alatsi Regular"; 
+        font-size: 4vw;
+        color: color($colors, chumbo);
+      }
+      .modalityloc {
+        position: absolute;
+        top: 13vw;
+        right: 10px;
+        width: 50%;
+        text-align: right;
+        font-family: "Alatsi Regular"; 
+        background-color: white;
+        font-size: 4vw;
+        color: color($colors, chumbo);
+      }
+      .price {
+        position: absolute;
+        top: 20vw;
+        right: 10px;
+        width: 45%;
+        text-align: right;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        font-weight: bold;
+        font-size: 5.5vw;
+        line-height: 30px;
+      }
+      .priceloc {
+        position: absolute;
+        top: 20vw;
+        right: 10px;
+        width: 45%;
+        text-align: right;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        background-color: white;
+        font-weight: bold;
+        font-size: 5.5vw;
+        line-height: 30px;
+      }
+      .showloc {
+        display: block;
+      }
+      .hideloc {
+        display: none;
+      }
+      .tax {
+        position: relative;
+        top: 0;
+        text-align: left;
+        left: 10px;
+        //width: 45%;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        font-weight: bold;
+        font-size: 3.5vw;
+        display: inline-block;
+      }
+      .vl_tax {
+        position: relative;
+        left: 10%;
+        top: 0;
+        text-align: right;
+        display: inline-block;
+        width: 50%;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        font-weight: bold;
+        font-size: 3.5vw;
+      }
+     
+      .img-broker {
+        position: relative;
+        float: left;
+        width: 10vw;
+        height: 10vw;
+        background-image: url(./../../assets/imgs/mansao.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5vw;
+        z-index: 1000;
+      }
+      .img-realestate {
+        position: relative;
+        float: left;
+        width: 10vw;
+        height: 10vw;
+        background-image: url(./../../assets/imgs/mansao.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5vw;
+        z-index: 1000;
+      }
+      .name-broker {
+        position: relative;
+        width: 100%;
+        margin-left: 12vw;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        line-height: 5vw;
+        font-size: 3vw;
+        text-align: left;
+      }
+      .name-realestate {
+        position: relative;
+        width: 100%;
+        margin-left: 12vw;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        line-height: 5vw;
+        font-size: 3vw;
+        text-align: left;
+      }
+      .title-description {
+        position: absolute;
+        top: 65vw;
+        left: 10px;
+        width: 200%;
+        text-align: left;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        font-size: 3.5vw;
+      }
+      .details-description {
+        position: absolute;
+        top: 70vw;
+        left: 10px;
+        width: 95%;
+        text-align: left;
+        min-height: 45vw;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        font-size: 2.5vw;
+      }
+      .details-description2 {
+        position: absolute;
+        top: 60vw;
+        left: 10px;
+        width: 95%;
+        text-align: left;
+        min-height: 45vw;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, chumbo);
+        font-size: 3vw;
+      }
+      .bg-schedule {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.726);
+        z-index: 1000000;
+      }
+      .schedule {
+        position: relative;
+        top: calc(50% - 50vw);
+        margin-left: 30px;
+        margin-right: 30px;
+        width: auto;
+        height: 55vh;
+        background-color: color($colors, azul);
+        border-radius: 10px;
+      }
+      .title-schedule {
+        position: relative;
+        top: 20px;
+        width: 100%;
+        text-align: center;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 4.3vw;
+        font-weight: bold;
+      }
+      .title-day-schedule {
+        position: absolute;
+        top: 10vh;
+        width: 50%;
+        left: 0;
+        text-align: center;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 4.5vh;
+      }
+      .title-month-schedule {
+        position: absolute;
+        top: 10vh;
+        width: 50%;
+        right: 0;
+        text-align: center;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 4.5vh;
+      }
+      .day-schedule {
+        position: absolute;
+        top: 15vh;
+        width: 50%;
+        left: 0;
+        text-align: center;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 10vh;
+        font-weight: bold;
+        letter-spacing: -3px;
+      }
+      .month-schedule {
+        position: absolute;
+        top: 15vh;
+        width: 50%;
+        right: 0;
+        text-align: center;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 10vh;
+        font-weight: bold;
+        letter-spacing: -3px;
+      }
+      .title-hour-schedule {
+        position: absolute;
+        top: 33vh;
+        width: 50%;
+        left: 2vw;
+        text-align: center;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 4.5vh;
+      }
+      .hour-schedule {
+        position: absolute;
+        top: 31vh;
+        width: 50%;
+        right: 12vw;
+        text-align: right;
+        font-family: "Alatsi Regular"; 
+        color: color($colors, branco);
+        font-size: 7vh;
+        font-weight: bold;
+      }
+      .h-line {
+        position: absolute;
+        top: 29vh;
+        width: auto;
+        height: 3px;
+        left: 30px;
+        right: 30px;
+        background-color: color($colors, branco);
+      }
+}

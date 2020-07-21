@@ -1,0 +1,30 @@
+<ion-nav [root]="rootPage"></ion-nav>
+
+<div class="bg-wizard">
+    
+</div>
+
+<div id="schedules_visits" class="bg-broker-schedule-visit hide-bg">
+    <div class="bg-broker-content">
+        <ion-icon class="close-schedule-visit" color="branco" name="close-circle" (click)="closePopupScheduleVisit(_svType, _svView)"></ion-icon>
+        <div class="calendar">
+            <ion-icon class="calendar-size" [name]="_svIcon" color="branco"></ion-icon>
+            <ion-icon *ngIf="_svType == 2" class="check-size" name="checkmark-circle" color="branco"></ion-icon>
+          </div>
+        <div class="msg-calendar">
+            {{ _svTitle }}<br>
+            {{ _svDate }}<br><!-- 
+            para o imóvel {{ _svCode }}<br>
+            <strong>{{ _svAddress }}</strong><br>
+            à {{ _svKm }}km de você! -->
+        </div>
+        <div class="btn-schedule-visit">
+            <button id="btc" type="button" ion-button (click)='skipSV(_svType, _svView);'>
+              CANCELAR
+            </button>
+            <button id="btw" type="button" ion-button (click)='agreeSV(_svType, _svView);'>
+              {{ _svButton }}
+            </button>
+          </div>
+    </div>
+</div>

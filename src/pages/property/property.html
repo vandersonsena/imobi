@@ -1,0 +1,83 @@
+<ion-header>
+        <ion-navbar >
+          <ion-title>{{ profile }}</ion-title>
+        </ion-navbar> 
+        <div class="numbers">
+                <div class="bg-num">
+                    <div class="num">1</div>
+                    <div class="num-out">2</div>
+                    <div class="num-out">3</div>
+                    <div class="num-out">4</div>
+                 </div>
+            </div>
+      </ion-header>
+    
+    <ion-content  padding class="masters">
+    
+        <div class="footer-frm">
+            <form [formGroup]="form">
+                <ion-list radio-group no-lines>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.city.valid || (!form.controls.city.dirty && !submitAttempt)" color="light" stacked>Qual a cidade do seu imóvel?</ion-label>
+                        <ion-label *ngIf="!form.controls.city.valid && (form.controls.city.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe a cidade!</strong></ion-label>
+                        <ion-input type="text" placeholder="ex: São Bernardo do Campo" name="name" formControlName="city"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.catid.valid || (!form.controls.catid.dirty && !submitAttempt)" color="light" stacked>Tipo do Imóvel:</ion-label>
+                        <ion-label *ngIf="!form.controls.catid.valid && (form.controls.catid.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione o tipo do imóvel!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="catid">
+                            <ion-option *ngFor="let cat of categories" [value]="cat.catid">{{ cat.category }}</ion-option>                           
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.address.valid || (!form.controls.address.dirty && !submitAttempt)" color="light" stacked>Endereço:</ion-label>
+                        <ion-label *ngIf="!form.controls.address.valid && (form.controls.address.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o endereço do imóvel!</strong></ion-label>
+                        <ion-input maxlength="50" formControlName="address" type="text" placeholder="Ex: Rua Jurubatuba"></ion-input>
+                    </ion-item>
+                    <div class="row">
+                            <div class="col">
+                                <ion-item class="nolines">
+                                    <ion-label color="light" *ngIf="form.controls.number.valid || (!form.control.number.dirty && !submitAttempt)" stacked>Número:</ion-label>
+                                    <ion-label *ngIf="!form.controls.number.valid  && (form.controls.number.dirty || submitAttempt)" color="light" stacked><strong class="error"><ion-icon name="alert"></ion-icon> N&ordm; incorreto!</strong></ion-label>
+                                    <ion-input #mynumber maxlength="10" type="text"  formControlName="number" placeholder="10, 100, 1000"></ion-input>
+                                </ion-item>
+                            </div>
+                            <div class="col">
+                                <ion-item class="nolines">
+                                    <ion-label color="light" stacked>Complemento:</ion-label>
+                                    <ion-input #complement value="{{ usr_complement }}" maxlength="20" type="text" formControlName="complement" placeholder="Ex: Apto 10"></ion-input>
+                                </ion-item>
+                            </div>
+                        </div>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.zipcode.valid || (!form.controls.zipcode.dirty && !submitAttempt)" color="light" stacked>CEP:</ion-label>
+                        <ion-label *ngIf="!form.controls.zipcode.valid && (form.controls.zipcode.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o CEP!</strong></ion-label>
+                        <ion-input type="tel" maxlength="9" [brmasker]="{mask:'00000-000', len:9}" placeholder="ex: 01539-000" name="zipcode" formControlName="zipcode"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.neighboor.valid || (!form.controls.neighboor.dirty && !submitAttempt)" color="light" stacked>Bairro:</ion-label>
+                        <ion-label *ngIf="!form.controls.neighboor.valid && (form.controls.neighboor.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o bairro!</strong></ion-label>
+                        <ion-input type="text" maxlength="50" placeholder="ex: Centro" name="neighboor" formControlName="neighboor"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.uf.valid || (!form.controls.uf.dirty && !submitAttempt)" color="light" stacked>UF:</ion-label>
+                        <ion-label *ngIf="!form.controls.uf.valid && (form.controls.uf.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o Estado!</strong></ion-label>
+                        <ion-input type="text" maxlength="2" placeholder="ex: SP" name="uf" formControlName="uf"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </form>
+        </div>
+    </ion-content>
+    
+    <ion-footer>
+        <ion-toolbar color="azul">
+           <!--  <button id="btback" ion-button block icon-left type="submit">
+                <ion-icon name="arrow-dropleft-circle"></ion-icon>
+                VOLTAR
+            </button> -->
+            <button id="btok" ion-button block icon-right type="button" (click)="submitProperty()">
+                AVANÇAR
+                <ion-icon name="arrow-dropright-circle"></ion-icon>
+            </button>
+        </ion-toolbar>
+      </ion-footer>

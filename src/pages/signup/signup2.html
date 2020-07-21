@@ -1,0 +1,124 @@
+<ion-header>
+        <ion-navbar >
+          <ion-title>{{ profile }}</ion-title>
+        </ion-navbar> 
+      </ion-header>
+    
+    <ion-content  padding class="masters">
+        <div class="footer-frm">
+            <div class="numbers">
+                <div class="bg-num">
+                    <div class="num">1</div>
+                    <div class="num">2</div>
+                </div>
+            </div>
+            <form [formGroup]="form">
+                <ion-list radio-group no-lines>
+                    <ion-item class="nolines" *ngIf="type == 2">
+                        <ion-label color="light" stacked>Enviar Foto:</ion-label>
+                    </ion-item>
+                    <ion-item class="nolines div-photos" *ngIf="type == 2">
+                        <div class="title-photo">1 Selfie com CRECI em mãos</div>
+                        <div class="title-photo">1 foto de Perfil</div>
+                        <div class="center-circ">
+                            <div class="circ-avatar" [style.background-image]="'url(' + selfie + ')'" (click)="addSelfie()"><div class="icon-edit-avatar"></div></div>
+                            <div class="circ-avatar" [style.background-image]="'url(' + photo + ')'" (click)="addPhoto()"><div class="icon-edit-avatar"></div></div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label color="light" stacked>Escolha uma Foto:</ion-label>
+                    </ion-item>
+                    <ion-item class="nolines div-photos" *ngIf="type != 2 && type != 4">
+                        <div class="center-circ2">
+                            <div class="circ-avatar" [style.background-image]="'url(' + selfie + ')'" (click)="addSelfie()"><div class="icon-edit-avatar"></div></div>
+<!--                            <div class="circ-avatar" [style.background-image]="'url(' + photo + ')'" (click)="addPhoto()"><div class="icon-edit-avatar"></div></div>
+-->                     </div>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label *ngIf="form.controls.civistate.valid || (!form.controls.civistate.dirty && !submitAttempt)" color="light" stacked>Estado Civil:</ion-label>
+                        <ion-label *ngIf="!form.controls.civistate.valid && (form.controls.civistate.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione uma opção!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="ex: Solteiro, Casado" formControlName="civistate">
+                            <ion-option [selected]="isFemale" value="1">Solteiro</ion-option>
+                            <ion-option [selected]="isMale" value="2">Casado</ion-option>
+                            <ion-option [selected]="isMale" value="3">Divorciado</ion-option>
+                            <ion-option [selected]="isMale" value="4">Viúvo</ion-option>
+                        </ion-select>                   
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label *ngIf="form.controls.pets.valid || (!form.controls.pets.dirty && !submitAttempt)" color="light" stacked>Pets?</ion-label>
+                        <ion-label *ngIf="!form.controls.pets.valid && (form.controls.pets.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Você tem Pets?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="pets">
+                            <ion-option [selected]="isFemale" value="1">SIM, tenho!</ion-option>
+                            <ion-option [selected]="isMale" value="0">Sem Pets!</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label *ngIf="form.controls.kids.valid || (!form.controls.kids.dirty && !submitAttempt)" color="light" stacked>Filhos:</ion-label>
+                        <ion-label *ngIf="!form.controls.kids.valid && (form.controls.kids.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Você tem filhos?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="kids">
+                            <ion-option [selected]="isFemale" value="1">SIM, tenho!</ion-option>
+                            <ion-option [selected]="isMale" value="0">Sem filhos!</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label *ngIf="form.controls.wishmod.valid || (!form.controls.wishmod.dirty && !submitAttempt)" color="light" stacked>O que deseja?</ion-label>
+                        <ion-label *ngIf="!form.controls.wishmod.valid && (form.controls.wishmod.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Deseja alugar ou comprar?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Alugar ou Comprar" formControlName="wishmod">
+                            <ion-option [selected]="isFemale" value="1">Alugar</ion-option>
+                            <ion-option [selected]="isMale" value="2">Comprar</ion-option>
+                            <ion-option [selected]="isMale" value="3">Vender</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label *ngIf="form.controls.wishcat.valid || (!form.controls.wishcat.dirty && !submitAttempt)" color="light" stacked>Imóvel:</ion-label>
+                        <ion-label *ngIf="!form.controls.wishcat.valid && (form.controls.wishcat.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Qual o tipo do imóvel?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="wishcat">
+                            <ion-option *ngFor="let cat of categories" [value]="cat.catid">{{ cat.alias }}</ion-option>                           
+                        </ion-select>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type != 2 && type != 4">
+                        <ion-label color="light" stacked>Valor Aproximado:<br>{{ lowPrice | currency: 'R$' : 'symbol' : '1.2-2' : 'pt' }} a {{ highPrice | currency: 'R$' : 'symbol' : '1.2-2' : 'pt' }}</ion-label>
+                        <ion-range (ionChange)="setKnobs(knobValues);" dualKnobs="true" min="50000" max="2000000" [(ngModel)]="knobValues" step="50000" pin="true" color="azul" formControlName="rangeprice"></ion-range>
+                    </ion-item>
+
+                    <ion-item class="nolines" *ngIf="type == 2">
+                        <ion-label *ngIf="form.controls.exclusive.valid || (!form.controls.exclusive.dirty && !submitAttempt)" color="light" stacked>Exclusivo de Imobiliária?</ion-label>
+                        <ion-label *ngIf="!form.controls.exclusive.valid && (form.controls.exclusive.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Exclusivo de Imobiliária?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="exclusive">
+                            <ion-option [selected]="1" value="1">SIM</ion-option>
+                            <ion-option [selected]="0" value="0">NÃO</ion-option>
+                        </ion-select>
+                    </ion-item>
+                   <ion-item class="nolines" *ngIf="type == 2">
+                        <ion-label *ngIf="form.controls.cnpj.valid || (!form.controls.cnpj.dirty && !submitAttempt)" color="light" stacked>Informe CNPJ da Imobiliária:</ion-label>
+                        <ion-label *ngIf="!form.controls.cnpj.valid && (form.controls.cnpj.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o CNPJ!</strong></ion-label>
+                        <ion-input type="tel" maxlength="18" [brmasker]="this.currentMask" placeholder="ex: 54.321.0123/0001-00" name="cnpj" formControlName="cnpj"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type == 2">
+                        <ion-label *ngIf="form.controls.cityb.valid || (!form.controls.cityb.dirty && !submitAttempt)" color="light" stacked>Cidade/Estado de atuação:</ion-label>
+                        <ion-label *ngIf="!form.controls.cityb.valid && (form.controls.cityb.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe a cidade de atuação!</strong></ion-label>
+                        <ion-input type="text" maxlength="50" placeholder="ex: São Bernardo do Campo" name="cityb" formControlName="cityb"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="type == 2">
+                        <ion-label *ngIf="form.controls.creci.valid || (!form.controls.creci.dirty && !submitAttempt)" color="light" stacked>Número do CRECI:</ion-label>
+                        <ion-label *ngIf="!form.controls.creci.valid && (form.controls.creci.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o número CRECI!</strong></ion-label>
+                        <ion-input type="text" maxlength="8" [brmasker]="{mask:'000000-0', len:8}" placeholder="ex: 074839-X" name="creci" formControlName="creci"></ion-input>
+                    </ion-item>
+                   
+                </ion-list>
+            </form>
+        </div>
+    </ion-content>
+    
+    <ion-footer>
+        <ion-toolbar color="azul">
+           <!--  <button id="btback" ion-button block icon-left type="submit">
+                <ion-icon name="arrow-dropleft-circle"></ion-icon>
+                VOLTAR
+            </button> -->
+            <button id="btok" ion-button block icon-right type="button" (click)="submitSignup()">
+                AVANÇAR
+                <ion-icon name="arrow-dropright-circle"></ion-icon>
+            </button>
+        </ion-toolbar>
+      </ion-footer>

@@ -1,0 +1,93 @@
+<ion-header>
+        <ion-navbar >
+          <ion-title>{{ profile }}</ion-title>
+        </ion-navbar> 
+        <div class="numbers">
+                <div class="bg-num">
+                    <div class="num">1</div>
+                    <div class="num">2</div>
+                    <div class="num">3</div>
+                    <div class="num-out">4</div>
+                 </div>
+            </div>
+      </ion-header>
+    
+    <ion-content  padding class="masters">
+    
+        <div class="footer-frm">
+            <form [formGroup]="form">
+                <ion-list radio-group no-lines>
+                    
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.garage.valid || (!form.controls.garage.dirty && !submitAttempt)" color="light" stacked>Vagas de Garagem:</ion-label>
+                        <ion-label *ngIf="!form.controls.garage.valid && (form.controls.garage.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Possui garagem?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="garage">
+                            <ion-option value="0">Sem Garagem</ion-option>
+                            <ion-option value="1">1</ion-option>
+                            <ion-option value="2">2</ion-option>
+                            <ion-option value="3">3</ion-option>
+                            <ion-option value="4">4</ion-option>
+                            <ion-option value="5">5</ion-option>
+                            <ion-option value="6">6</ion-option>
+                            <ion-option value="7">7</ion-option>
+                            <ion-option value="8">8</ion-option>
+                            <ion-option value="9">9</ion-option>                           
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.occupied.valid || (!form.controls.occupied.dirty && !submitAttempt)" color="light" stacked>Quem mora no imóvel?</ion-label>
+                        <ion-label *ngIf="!form.controls.occupied.valid && (form.controls.occupied.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Quem mora no imóvel?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="occupied">
+                            <ion-option value="0">Eu Moro</ion-option>
+                            <ion-option value="1">Desocupado</ion-option>
+                            <ion-option value="2">Inquilino Mora</ion-option>                              
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.relationship.valid || (!form.controls.relationship.dirty && !submitAttempt)" color="light" stacked>Qual sua relação com o proprietário?</ion-label>
+                        <ion-label *ngIf="!form.controls.relationship.valid && (form.controls.relationship.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Qual sua relação com o proprietário?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="relationship">
+                            <ion-option value="0">Proprietário</ion-option>
+                            <ion-option value="1">Administrador/Terceiro</ion-option>
+                            <ion-option value="2">Imobiliária</ion-option>                               
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.kind.valid || (!form.controls.kind.dirty && !submitAttempt)" color="light" stacked>O que deseja?</ion-label>
+                        <ion-label *ngIf="!form.controls.kind.valid && (form.controls.kind.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Deseja vender ou alugar?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="kind">
+                            <ion-option value="1">Quero Alugar</ion-option>
+                            <ion-option value="2">Quero Vender</ion-option>                              
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.price.valid || (!form.controls.price.dirty && !submitAttempt)" color="light" stacked>Preço de Venda/Locação:</ion-label>
+                        <ion-label *ngIf="!form.controls.price.valid && (form.controls.price.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o Preço de Venda/Locação!</strong></ion-label>
+                        <ion-input type="tel" maxlength="15" [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}" placeholder="ex: 01539-000" name="price" formControlName="price"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.visitdates.valid || (!form.controls.visitdates.dirty && !submitAttempt)" color="light" stacked>Qual a possibilidade de visitas do imóvel?</ion-label>
+                        <ion-label *ngIf="!form.controls.visitdates.valid && (form.controls.visitdates.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Qual a possibilidade de visitas do imóvel?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="visitdates">
+                            <ion-option value="1">De segunda a sexta, 08h as 19h</ion-option>
+                            <ion-option value="2">Sábados, das 09h as 14h</ion-option>
+                            <ion-option value="3">Domingo, das 09 as 14h</ion-option>                              
+                        </ion-select> 
+                    </ion-item>
+                </ion-list>
+            </form>
+        </div>
+    </ion-content>
+    
+    <ion-footer>
+        <ion-toolbar color="azul">
+           <!--  <button id="btback" ion-button block icon-left type="submit">
+                <ion-icon name="arrow-dropleft-circle"></ion-icon>
+                VOLTAR
+            </button> -->
+            <button id="btok" ion-button block icon-right type="button" (click)="submitProperty()">
+                AVANÇAR
+                <ion-icon name="arrow-dropright-circle"></ion-icon>
+            </button>
+        </ion-toolbar>
+      </ion-footer>

@@ -1,0 +1,76 @@
+<ion-content>
+        <button class="btn-back" ion-button icon-only (click)="goBack()">
+            <ion-icon name="arrow-back" color="azul"></ion-icon>
+        </button>
+    <div class="map-content">            
+        <div #map id="map"></div>
+    </div>
+</ion-content>
+<div id="div-flow" *ngIf="_brokerBusy" class="broker-position" (click)="showHideFlow();">
+    <div class="key-ico animated pulse infinite"></div>
+    <div id="hide-flow" class="flow-visit hide-flow animated bounceInRight">
+        <div class="item-flow">
+            <div class="ico-broker"></div>
+            <div class="ico-pin animated pulse infinite"></div>
+            <div class="line-flow"></div>
+            <div class="lbl_person">CORRETOR</div>
+            <div class="lbl_time">{{ hour_broker }}</div>
+            <div class="lbl_status">Aceitou Visita</div>
+        </div>
+        <div class="item-flow">
+            <div class="ico-broker"></div>
+            <div class="ico-pin animated pulse infinite"></div>
+            <div class="line-flow"></div>
+            <div class="lbl_person">IMOBILIÁRIA</div>
+            <div class="lbl_time">{{ hour_others }}</div>
+            <div class="lbl_status">Notificada</div>
+        </div>
+        <div class="item-flow">
+            <div class="ico-broker"></div>
+            <div class="ico-pin animated pulse infinite"></div>
+            <div class="line-flow-c"></div>
+            <div class="lbl_person">PROPRIETÁRIO</div>
+            <div class="lbl_time">{{ hour_others }}</div>
+            <div class="lbl_status">Notificado</div>
+        </div>
+        <div class="item-flow">
+            <div class="ico-visit"></div>
+            <div class="ico-pin animated pulse infinite"></div>
+            <div class="lbl_person">VISITA</div>
+            <div class="lbl_time">{{ hour_visit }}</div>
+            <div class="lbl_status">Encerramento</div>
+        </div>
+    </div>
+</div> 
+<div class="info">
+    <div class="wait" *ngIf="_pairingBroker">
+        <div class="txt-wait animated pulse infinite">Aguarde! Comunicando-se com <br>o corretor selecionado...</div>
+        <button id="btc-wait" type="button" ion-button (click)='cancel();'>
+            CANCELAR SOLICITAÇÃO
+        </button>
+    </div>
+    <div class="info-content" *ngIf="_brokerDetails">
+        <div class="img-broker" [style.background-image]="'url(' + broker_img + ')'" ></div>
+        <div class="bullet"></div>
+        <div class="name-broker"><strong>CORRETOR</strong><br>{{ broker_name }}</div>
+        <div class="status-broker">Disponível Agora</div>
+        <div class="v-line"></div>
+        <div class="distance"><strong>á {{ broker_dist }} km<br>Aprox. {{ broker_minutes }} min</strong></div>
+        <div class="contacts">{{ broker_email }}<br>{{ broker_phone }}</div>
+        <button id="bt" type="button" ion-button (click)="callBroker();">
+            VER AGORA
+        </button>
+    </div>
+    <div class="info-content" *ngIf="_brokerBusy">
+        <div class="img-broker" [style.background-image]="'url(' + broker_img + ')'"></div>
+        <div class="bullet animated fadeIn infinite"></div>
+        <div class="name-broker"><strong>CORRETOR</strong><br>{{ broker_name }}</div>
+        <div class="status-broker">A CAMINHO</div>
+        <div class="v-line"></div>
+        <div class="distance"><strong>á {{ broker_dist }} km<br>Aprox. {{ broker_minutes }} min</strong></div>
+        <div class="contacts">{{ broker_email }}<br>{{ broker_phone }}</div>
+        <button id="btc" type="button" ion-button (click)='cancelVisit(broker_dist);'>
+            CANCELAR
+        </button>
+    </div>
+</div>  

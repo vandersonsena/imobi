@@ -1,0 +1,755 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only color="branco">
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title color="azul">
+      <div class="center-home-logo">
+        <img src="./../../assets/imgs/logo.png" class="logo-home"/>
+      </div>
+    </ion-title>
+    <ion-buttons end *ngIf="_userLogged != 'none'">
+      <img src="{{ usr_avatar }}" class="avatar"/>
+    </ion-buttons>
+    <a (click)='signinPage()'>
+      <ion-buttons end *ngIf="_userLogged == 'none'">
+        <ion-icon name="contact" color="branco" (click)='signinPage("Entrar no Imobi Places", 1);'></ion-icon>
+      </ion-buttons>
+    </a>
+  </ion-navbar> 
+</ion-header>
+ 
+<ion-menu [content]="myContent" type="overlay">
+  <ion-content style="background-color: #FFFFFF;">
+    <ion-list class="list-menu-app">
+      <div class="bg-top-menu">
+        <div class="logo-in-menu"></div>
+      </div>
+      <div class="main-logged-menu" *ngIf="_userLogged != 'none'">
+        <div class="item-div-menu-logged">
+          <span class="item-span-menu-logged item-span-title-menu-logged">Olá {{ usr_user }}!</span>
+          <span class="item-span-menu-logged det-login">{{ usr_email }}</span>
+          <span class="item-span-menu-logged det-login">{{ usr_profile }}</span>
+        </div>
+        <div menuClose class="item-div-menu-logged" (click)="exitMyApp()">
+          <ion-icon icon-left name="log-out" class="icons-menu-logged"></ion-icon>
+        </div>
+      </div>
+      <div class="main-list-menu">
+        <div menuClose class="item-div-menu" *ngIf="usr_type == 1 || usr_type == 2" (click)="schedulePage()">
+          <ion-icon icon-left name="calendar" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Agendamentos</span>
+        </div>
+        <div menuClose class="item-div-menu" *ngIf="usr_type == 2">
+          <ion-icon icon-left name="calendar" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Visitas em Andamento</span>
+        </div>
+        <!-- <div menuClose class="item-div-menu" (click)="contactPage()">
+          <ion-icon icon-left name="call" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Fale Conosco</span>
+        </div> -->
+        <div menuClose *ngIf="_userLogged == 'none'" class="item-div-menu" (click)='signinPage("Entrar como Proprietário", 3);'>
+          <ion-icon icon-left name="person" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Entrar como Proprietário</span>
+        </div>
+        <div menuClose *ngIf="_userLogged == 'none'" class="item-div-menu" (click)='signinPage("Entrar como Morador", 1);'>
+          <ion-icon icon-left name="person-add" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Entrar como Morador</span>
+        </div>
+        <div menuClose *ngIf="_userLogged == 'none'" class="item-div-menu" (click)='signinPage("Entrar como Corretor", 2);'>
+          <ion-icon icon-left name="people" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Entrar como Corretor</span>
+        </div>
+        <div menuClose *ngIf="_userLogged == 'none'" class="item-div-menu" (click)='signinPage("Entrar como Imobiliária", 4);'>
+          <ion-icon icon-left name="people" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Entrar como Imobiliária</span>
+        </div>
+       <!--  <div menuClose class="item-div-menu" (click)="rateApp()">
+          <ion-icon icon-left name="star" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Avalie o App</span>
+        </div> -->
+        <div menuClose class="item-div-menu" (click)="termsPage()">
+          <ion-icon icon-left name="clipboard" class="icons-menu"></ion-icon>
+          <span class="item-span-menu">Termos de Uso</span>
+        </div>
+      </div>
+      <div class="bg-bottom-menu"></div>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #myContent [root]="rootPage"></ion-nav>
+
+<div *ngIf="_showFilter" class="filter-options">
+    <div class="bg-filter">
+        <div class="find-field-custom">
+            <form [formGroup]="form" (submit)="loginEmail()">
+                <ion-list radio-group no-lines>
+                    <ion-item class="nolines">
+                        <ion-label class="nolines" stacked></ion-label>
+                        <ion-input type="text" placeholder="Buscar Endereço ou Imóvel" name="name" formControlName="name"></ion-input>
+                    </ion-item>
+                    <ion-icon (click)="showFilter()" class="showpin" name="pin" color="cinza" ></ion-icon>    
+                </ion-list>
+            </form>
+          </div>
+    </div>
+</div>
+
+<ion-content padding class="gray menuios" (ionScroll)="scrolling($event)">
+
+  <!-- USER TAB (USUARIO) [0-1] -->
+  <div *ngIf="_userProfile == 0 || _userProfile == 1">
+      <div class="main-content-home">
+        <div class="fixed-content-home">
+            <div class="block-searchbar">
+                <div class="find-field">
+                  <div class="autocomplete">
+                    <div (click)="showFilter()" class="pin-icon-input"></div>
+                    <ion-searchbar
+                      [(ngModel)]="input_search"
+                      (ionInput)="search_location()"
+                      (ionBlur)="removeFocus()"
+                      (ionCancel)="onCancel()"
+                      placeholder="Buscar endereço"
+                      debounce=500>
+                    </ion-searchbar>
+                    <ion-list>
+                      <ion-item *ngFor="let location of locations_searched" (click)="neighboorPage(location)">
+                        <ion-icon name="pin" item-left></ion-icon>
+                        {{location.neighboor}}, {{location.city}}
+                      </ion-item>
+                    </ion-list>
+                  </div>
+                </div>
+                <div class="block-actions">
+                    <div class="action-buttons">
+                      <div class="qrcode" (click)="scanImage();"><div class="title-action">QR CODE</div></div>
+                      <div class="favourites" (click)="favouritePage()"><div class="title-action">FAVORITOS</div></div>
+                      <div class="near" (click)="discoverPage(17)"><div class="title-action">PRÓXIMOS</div></div>
+                    </div>
+                </div> 
+            </div>
+            <div class="start-scroll"></div>
+        </div>
+        <div class="scroll-content">
+            <div class="block-suggestions">
+                <div class="suggestions">
+                  <h4 class="suggestions-h4">Sugestões Imobi</h4>
+                  <div class="listprops">
+                    <div *ngFor="let pro of ARR_ITEMS" class="thumb-content" (click)="openProperty(pro.proid);">
+                      <div class="img-thumb" [style.background-image]="'url(' + pro.urlimage + ')'"></div>
+                      <div class="category"> {{ pro.alias }}</div>
+                        <div class="thumb-details">
+                          <div class="location"> {{ pro.neighboor }}</div>
+                          <div class="modality">{{ pro.modality }}</div>
+                          <div class="price">R$ {{ pro.price }}</div>
+                          <div class="group-icons">
+                            <div class="icons">
+                              <div class="area"><div class="icon-home-h"></div></div>
+                              <div class="measure">{{ pro.area }} m²</div>
+                            </div>
+                            <div class="icons">
+                              <div class="area"><div class="icon-home-b"></div></div>
+                              <div class="measure">{{ pro.rooms }}</div>
+                            </div>
+                            <div class="icons">
+                              <div class="area"><div [class]="pro.icons"></div></div>
+                              <div class="measure">{{ pro.types }}</div>
+                            </div>
+                          </div> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-map">
+                <div class="map-content">
+                  <h4 class="suggestions-h4">Descubra</h4>
+                    <!-- <div class="subtitles-map">
+                      <div class="sub-pin" (click)="discover()"><div class="img-pin"></div>Imóveis</div>
+                      <div class="sub-pin" (click)="discover()"><div class="img-bro"></div>Corretores</div>
+                    </div> -->
+                    <div #map id="map"></div>
+                </div>
+            </div>
+        </div>
+      </div> 
+    </div>
+
+    <!-- BROKER TAB (CORRETOR) [2] -->
+    <div *ngIf="_userProfile == 2" class="home-broker">
+      <div class="fixed-content-home">
+          <div class="enable-broker">
+              <div class="bg-toggle"></div>
+              <div class="lbl_toggle animated fadeIn" (click)="enableBroker()">{{ lblToggle }}</div>
+              <div *ngIf="_brokerOffline" class="toggle-off" (click)="enableBroker()">
+                <div class="icon-toggle-off"></div>
+              </div>
+              <div *ngIf="!_brokerOffline" class="toggle-on" (click)="enableBroker()">
+                <div class="icon-toggle-on"></div>
+              </div>
+            </div>
+            <div class="tabs-broker">
+              <div id="tab_client" class="tab-item-owner tab-active" (click)="openTab(0)">CLIENTES</div>
+              <div id="tab_ads" class="tab-item-owner" (click)="openTab(2)">ANÚNCIOS</div>
+              <div class="tabs-content-broker">
+                <div class="clients-broker animated fadeIn" *ngIf="_tabNum == 0">
+                  
+
+                  <div class="client-info" (swipe)="closeDeal(1)">
+                    <div class="img-client"></div>
+                    <div class="client-data">
+                      <strong>FERNANDA REIS</strong><br>
+                      Visitou o imóvel C25-ML28<br>
+                      fernanda_2@gmail.com<br>
+                      +55 11 98765-1234
+                    </div>
+                  </div>
+
+
+                    <div id="deal-1" class="deal-client animated bounceInRight hide-deal">Fechar<br><br><strong>X</strong></div>
+                </div>          
+      
+                <div class="ads-broker animated fadeIn" *ngIf="_tabNum == 2">                
+                  <div *ngFor="let imv of ARR_PROPERTY_IMV" >
+                    <div class="listprops2" (click)="openProperty(imv.proid);">
+                      <img src="{{ imv.urlimage }}" class="img-property"/>
+                      <div class="prop-cat">{{ imv.alias }}</div>
+                      <div class="info">
+                        <div class="prop-location">{{ imv.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ imv.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ imv.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div [class]="imv.icons"></div></div>
+                            <div class="measure">{{ imv.types }}</div>
+                          </div>
+                        </div>
+                        <!-- <div class="modality2">{{ imv.modality }}</div> -->
+                        <div class="price2">R$ {{ imv.price }} </div>
+                      </div>
+                    </div>
+                  </div>             
+                </div>          
+              </div>
+              <div class="schedule-broker animated fadeIn">
+                <div class="schedule-date">
+                  <div class="schedule-data-info-title">AGENDA DO DIA</div>
+                  <div class="schedule-data-info">{{currentWeekDay}}, {{day}} de {{monthName}} de {{year}}</div>
+                </div>
+
+                <div class="content-schedule">
+
+                  <div class="schedule-info">
+                    <div class="schedule-hour-info">19:15</div>
+                    <div class="check-schedule"></div>
+                    <div class="schedule-client-info"><strong>Cliente: Inacio Lisboa<br>Visita Imóvel: </strong>C76-ML28 - Rua Junior Baptista, 1020 - São Bernando do Campo / SP</div>
+                  </div>
+                            
+                </div>
+              </div>
+            </div>
+      </div> 
+    </div>
+
+    <!-- OWNER TAB (PROPRIETARIO) -->
+    <div *ngIf="_userProfile == 3" class="home-owner">
+      <div class="toggle-owner">
+        <div id="ot_0" class="toggle-property toggle-active" (click)="ownerTab(0)">
+          <div class="ico-toggle-property"></div>
+          <div class="toggle-num-property">{{ propertyLength }}</div>
+          <div class="toggle-lbl-property">imóveis</div>
+        </div>
+        <div id="ot_1" class="toggle-schedule" (click)="ownerTab(1)">
+          <div class="ico-toggle-schedule"></div>
+          <div class="toggle-num-schedule">0</div>
+          <div class="toggle-lbl-schedule">agendamentos</div>
+        </div>
+      </div>
+      <div class="tabs-owner" *ngIf="_ownerTab == 0">
+        <div id="tab_onair" class="tab-item-owner tab-active" (click)="openTab(3)">NO AR</div>
+        <div id="tab_offline" class="tab-item-owner" (click)="openTab(4)">OFFLINE</div>
+        <div class="tabs-content">
+          <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 3">
+            <div *ngFor="let imv of ARR_PROPERTIES_OWNER_ONLINE" >
+              <div class="listprops2" (click)="openProperty(imv.proid);">
+                <img src="{{ imv.urlimage }}" class="img-property"/>
+                <div class="prop-cat">{{ imv.alias }}</div>
+                <div class="info">
+                  <div class="prop-location">{{ imv.neighboor }}</div>
+                  <div class="group-icons bottom">
+                    <div class="icons">
+                      <div class="area"><div class="icon-home-h"></div></div>
+                      <div class="measure">{{ imv.area }} m²</div>
+                    </div>
+                    <div class="icons">
+                      <div class="area"><div class="icon-home-b"></div></div>
+                      <div class="measure">{{ imv.rooms }}</div>
+                    </div>
+                    <div class="icons">
+                      <div class="area"><div [class]="imv.icons"></div></div>
+                      <div class="measure">{{ imv.types }}</div>
+                    </div>
+                  </div>
+                  <!-- <div class="modality2">{{ imv.modality }}</div> -->
+                  <div class="price2">R$ {{ imv.price }} </div>
+                </div>
+              </div>
+            </div>        
+          </div>
+          <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 4">
+            <div *ngFor="let imv of ARR_PROPERTIES_OWNER_OFFLINE" >
+              <div class="listprops2" (click)="openProperty(imv.proid);">
+                <div class="action-offline">
+                  <button class="bt" type="button" (click)="addProperty(imv, true)" ion-button>REVISAR E ATIVAR</button>
+                  <div class="title-offline">Anúncio Recusado</div>
+                  <div class="descr-offline">As imagens estao identicas. Favor atualizar as fotos.</div>
+                </div>
+                <img src="{{ imv.urlimage }}" class="img-property"/>
+                <div class="prop-cat">{{ imv.alias }}</div>
+                <div class="info">
+                  <div class="prop-location">{{ imv.neighboor }}</div>
+                  <div class="group-icons bottom">
+                    <div class="icons">
+                      <div class="area"><div class="icon-home-h"></div></div>
+                      <div class="measure">{{ imv.area }} m²</div>
+                    </div>
+                    <div class="icons">
+                      <div class="area"><div class="icon-home-b"></div></div>
+                      <div class="measure">{{ imv.rooms }}</div>
+                    </div>
+                    <div class="icons">
+                      <div class="area"><div [class]="imv.icons"></div></div>
+                      <div class="measure">{{ imv.types }}</div>
+                    </div>
+                  </div>
+                  <div class="price2">R$ {{ imv.price }} </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div> 
+
+
+
+      <div class="tabs-owner" *ngIf="_ownerTab == 1">
+        <div id="tab_visits" class="tab-item-owner tab-active" (click)="openTab(5)">EM ANDAMENTO</div>
+        <div id="tab_ended" class="tab-item-owner" (click)="openTab(6)">FINALIZADOS</div>
+        <div class="tabs-content" style="height: calc(100% + 15px);display: flex; justify-content: center;">
+          <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 5">
+            <div class="ot-listprops">
+              <div class="ot-img-schedule"><div class="ot-status-visit">Visita Confirmada</div></div>
+              <div class="ot-prop-cat">Casa</div>
+              <div class="ot-info">
+                <div class="ot-prop-location"> VILA MARIANA</div>
+                <div class="group-icons bottom">
+                  <div class="icons">
+                    <div class="area"><div class="icon-home-h"></div></div>
+                    <div class="measure">123 m²</div>
+                  </div>
+                  <div class="icons">
+                    <div class="area"><div class="icon-home-b"></div></div>
+                    <div class="measure">456</div>
+                  </div>
+                  <div class="icons">
+                    <div class="area"><div class="icon-home-p"></div></div>
+                    <div class="measure">789</div>
+                  </div>
+                </div>
+                <!-- <div class="ot-modality">Aluguel</div> -->                  
+                <div class="ot-price">R$ 1.800</div>
+              </div>
+              <div class="ot-info-broker">
+                <div class="ot-img-broker"></div>
+                <div class="ot-name-broker"><strong>CORRETOR</strong><br>Daniel Triboni</div>
+                <div class="ot-h-line"></div>
+                <div class="ot-v-line"></div>
+                <div class="ot-day">15</div>
+                <div class="ot-month">MAI</div>
+                <div class="ot-hour">10:30</div>
+              </div>
+            </div>
+          </div>
+          <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 4">
+            <div *ngFor="let imv of ARR_PROPERTY_OFF_IMV">
+              <div class="listprops2" (click)="openProperty(imv.proid);">
+                <div class="action-offline">
+                  <button class="bt" type="button" (click)="addProperty(imv, true)" ion-button>REVISAR E ATIVAR</button>
+                  <div class="title-offline">Anúncio Recusado</div>
+                  <div class="descr-offline">As imagens estao identicas. Favor atualizar as fotos.</div>
+                </div>
+                <img src="{{ imv.urlimage }}" class="img-property"/>
+                <div class="prop-cat">{{ imv.alias }}</div>
+                <div class="info">
+                  <div class="prop-location">{{ imv.neighboor }}</div>
+                  <div class="group-icons bottom">
+                    <div class="icons">
+                      <div class="area"><div class="icon-home-h"></div></div>
+                      <div class="measure">{{ imv.area }} m²</div>
+                    </div>
+                    <div class="icons">
+                      <div class="area"><div class="icon-home-b"></div></div>
+                      <div class="measure">{{ imv.rooms }}</div>
+                    </div>
+                    <div class="icons">
+                      <div class="area"><div [class]="imv.icons"></div></div>
+                      <div class="measure">{{ imv.types }}</div>
+                    </div>
+                  </div>
+                  <div class="price2">R$ {{ imv.price }} </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+
+    <!-- REAL ESTATE TAB (IMOBILIARIA) [4] -->
+    <div *ngIf="_userProfile == 4" class="home-owner">
+        <div class="toggle-realestate">
+          <div id="rt_0" class="toggle-property" (click)="reTab(0)">
+            <div class="ico-toggle-broker"></div>
+            <div class="toggle-num-property">0</div>
+            <div class="toggle-lbl-property">corretores</div>
+          </div>
+          <div id="rt_1" class="toggle-schedule" (click)="reTab(1)">
+            <div class="ico-toggle-schedule"></div>
+            <div class="toggle-num-schedule">0</div>
+            <div class="toggle-lbl-schedule">agendamentos</div>
+          </div>
+        </div> 
+        <div class="toggle-realestate">
+          <div id="rt_2" class="toggle-property toggle-active" (click)="reTab(2)">
+            <div class="ico-toggle-property"></div>
+            <div class="toggle-num-property">0</div>
+            <div class="toggle-lbl-property">imóveis</div>
+          </div>
+          <div id="rt_3" class="toggle-schedule" (click)="reTab(3)">
+            <div class="ico-toggle-star"></div>
+            <div class="toggle-num-schedule">0</div>
+            <div class="toggle-lbl-schedule">leads</div>
+          </div>
+        </div>
+  
+  
+          <div class="tabs-re" *ngIf="_reTab == 0">
+              <div id="tab_re" class="tab-item-owner tab-active" (click)="openTab(9)">IMOBILIÁRIA</div>
+              <div id="tab_im" class="tab-item-owner" (click)="openTab(10)">PARCEIROS</div>
+              <div class="tabs-content" style="height: calc(100% + 15px);display: flex; justify-content: center;" >
+
+
+                  <div class="clients-broker animated fadeIn" *ngIf="_tabNum == 9">
+                      <div class="client-info" (swipe)="closeDeal(1)">
+                          <div class="img-client"></div>
+                          <div class="client-data">
+                              <strong>FERNANDA REIS</strong><br>
+                              fernanda_2@gmail.com<br>
+                              +55 11 98765-1234
+                          </div>
+                        </div>
+                      
+                       
+                    </div>
+
+                    <div class="clients-broker animated fadeIn" *ngIf="_tabNum == 10">
+                        <div class="client-info" (swipe)="closeDeal(1)">
+                            <div class="img-client"></div>
+                            <div class="client-data">
+                                <strong>FERNANDA REIS</strong><br>
+                                fernanda_2@gmail.com<br>
+                                +55 11 98765-1234
+                            </div>
+                          </div>
+                         
+
+                         
+                      </div>
+
+              </div>
+          </div>
+          
+
+          <div class="tabs-re" *ngIf="_reTab == 3">
+              <div id="tab_re" class="tab-item-re tab-active" (click)="openTab(13)">NOVOS LEADS</div>
+              <div class="tabs-content" style="height: calc(100% + 15px);display: flex; justify-content: center;">
+
+                  <div class="clients-broker animated fadeIn" *ngIf="_tabNum == 13">
+                      <div class="client-info" (swipe)="closeDeal(1)">
+                          <div class="img-client"></div>
+                          <div class="client-data">
+                              <strong>FERNANDA REIS</strong><br>
+                              Visitou o imóvel C25-ML28 em 20/08<br>
+                              fernanda_2@gmail.com<br>
+                              +55 11 98765-1234
+                          </div>
+                        </div>
+                       
+                       
+                    </div>
+
+                </div>
+          </div>
+          
+          <div class="tabs-re" *ngIf="_reTab == 1">
+            <div id="tab_re" class="tab-item-owner tab-active" (click)="openTab(11)">EM ANDAMENTO</div>
+            <div id="tab_im" class="tab-item-owner" (click)="openTab(12)">FINALIZADOS</div>
+            <div class="tabs-content" style="height: calc(100% + 15px);display: flex; justify-content: center;">
+              <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 11">
+                <div *ngFor="let age of ARR_ITEMS">
+                  <div class="ot-listprops" (click)="openProperty(age.proid);">
+                      <div class="ot-img-schedule"><div class="ot-status-visit">Visita Confirmada</div></div>
+                      <div class="ot-prop-cat">{{ age.alias }}</div>
+                      <div class="ot-info">
+                        <div class="ot-prop-location"> {{ age.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ age.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ age.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-p"></div></div>
+                            <div class="measure">{{ age.type }}</div>
+                          </div>
+                        </div>
+                        <!-- <div class="ot-modality">Aluguel</div> -->                  
+                        <div class="ot-price">R$ {{ age.price }}</div>
+                      </div>
+                      <div class="ot-info-broker">
+                        <div class="ot-img-broker"></div>
+                        <div class="ot-name-broker"><strong>CORRETOR</strong><br>{{ age.broker }}</div>
+                        <div class="ot-h-line"></div>
+                        <div class="ot-v-line"></div>
+                        <div class="ot-day">{{ age.day_visit }}</div>
+                        <div class="ot-month">{{ age.month_visit }}</div>
+                        <div class="ot-hour">{{ age.hour_visit }}</div>
+                      </div>
+                    </div>
+                  </div>     
+                </div>
+
+                <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 12">
+                  <div *ngFor="let age of ARR_ITEMS">
+                    <div class="ot-listprops" (click)="openProperty(age.proid);">
+                      <div class="ot-img-schedule"><div class="ot-status-visit">Visita Confirmada</div></div>
+                      <div class="ot-prop-cat">{{ age.alias }}</div>
+                      <div class="ot-info">
+                        <div class="ot-prop-location"> {{ age.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ age.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ age.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-p"></div></div>
+                            <div class="measure">{{ age.type }}</div>
+                          </div>
+                        </div>
+                        <!-- <div class="ot-modality">Aluguel</div> -->                  
+                        <div class="ot-price">R$ {{ age.price }}</div>
+                      </div>
+                      <div class="ot-info-broker">
+                        <div class="ot-img-broker"></div>
+                        <div class="ot-name-broker"><strong>CORRETOR</strong><br>{{ age.broker }}</div>
+                        <div class="ot-h-line"></div>
+                        <div class="ot-v-line"></div>
+                        <div class="ot-day">{{ age.day_visit }}</div>
+                        <div class="ot-month">{{ age.month_visit }}</div>
+                        <div class="ot-hour">{{ age.hour_visit }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="tabs-re" *ngIf="_reTab == 2">
+              <div id="tab_re" class="tab-item-owner tab-active" (click)="openTab(7)">IMOBILIÁRIA</div>
+              <div id="tab_im" class="tab-item-owner" (click)="openTab(8)">IMOBI</div>
+              <div class="tabs-content" style="height: calc(100% + 15px);display: flex; justify-content: center;">
+                <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 7">
+                  <div *ngFor="let imv of ARR_ITEMS">
+                    <div class="listprops2" (click)="openProperty(imv.proid);">
+                      <img src="{{ imv.urlimage }}" class="img-property"/>
+                      <div class="prop-cat">{{ imv.alias }}</div>
+                      <div class="info">
+                        <div class="prop-location">{{ imv.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ imv.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ imv.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div [class]="imv.icons"></div></div>
+                            <div class="measure">{{ imv.types }}</div>
+                          </div>
+                        </div>
+                        <!-- <div class="modality2">{{ imv.modality }}</div> -->
+                        <div class="price2">R$ {{ imv.price }} </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 8">
+                  <div *ngFor="let imv of ARR_ITEMS">
+                    <div class="listprops2" (click)="openProperty(imv.proid);">
+                      <img src="{{ imv.urlimage }}" class="img-property"/>
+                      <div class="prop-cat">{{ imv.alias }}</div>
+                      <div class="info">
+                        <div class="prop-location">{{ imv.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ imv.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ imv.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div [class]="imv.icons"></div></div>
+                            <div class="measure">{{ imv.types }}</div>
+                          </div>
+                        </div>
+                        <!-- <div class="modality2">{{ imv.modality }}</div> -->
+                        <div class="price2">R$ {{ imv.price }} </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 4">
+                  <div>   
+                    <div class="listprops2" (click)="openProperty(imv.proid);">
+                      <div class="action-offline">
+                        <button class="bt" type="button" (click)="addProperty(imv, true)" ion-button>REVISAR E ATIVAR</button>
+                        <div class="title-offline">Anúncio Recusado</div>
+                        <div class="descr-offline">As imagens estao identicas. Favor atualizar as fotos.</div>
+                      </div>
+                      <img src="{{ imv.urlimage }}" class="img-property"/>
+                      <div class="prop-cat">{{ imv.alias }}</div>
+                      <div class="info">
+                        <div class="prop-location">{{ imv.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ imv.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ imv.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div [class]="imv.icons"></div></div>
+                            <div class="measure">{{ imv.types }}</div>
+                          </div>
+                        </div>
+                        <div class="price2">R$ {{ imv.price }} </div>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div> 
+  
+            <div class="tabs-owner" *ngIf="_ownerTab == 1">
+              <div id="tab_visits" class="tab-item-owner tab-active" (click)="openTab(5)">EM ANDAMENTO</div>
+              <div id="tab_ended" class="tab-item-owner" (click)="openTab(6)">FINALIZADOS</div>
+              <div class="tabs-content">
+                <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 5">
+                  <div *ngFor="let age of ARR_ITEMS" (click)="openProperty(age.proid);">
+                    <div class="ot-listprops">
+                      <div class="ot-img-schedule"><div class="ot-status-visit">Visita Confirmada</div></div>
+                      <div class="ot-prop-cat">{{ age.alias }}</div>
+                      <div class="ot-info">
+                        <div class="ot-prop-location"> {{ age.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ age.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ age.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-p"></div></div>
+                            <div class="measure">{{ age.type }}</div>
+                          </div>
+                        </div>
+                        <!-- <div class="ot-modality">Aluguel</div> -->                  
+                        <div class="ot-price">R$ {{ age.price }}</div>
+                      </div>
+                      <div class="ot-info-broker">
+                        <div class="ot-img-broker"></div>
+                        <div class="ot-name-broker"><strong>CORRETOR</strong><br>{{ age.broker }}</div>
+                        <div class="ot-h-line"></div>
+                        <div class="ot-v-line"></div>
+                        <div class="ot-day">{{ age.day_visit }}</div>
+                        <div class="ot-month">{{ age.month_visit }}</div>
+                        <div class="ot-hour">{{ age.hour_visit }}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="ads-owner animated fadeIn" *ngIf="_tabNum == 4">
+                  <div>
+                    <div class="listprops2" (click)="openProperty(imv.proid);">
+                      <div class="action-offline">
+                        <button class="bt" type="button" (click)="addProperty(imv, true)" ion-button>REVISAR E ATIVAR</button>
+                        <div class="title-offline">Anúncio Recusado</div>
+                        <div class="descr-offline">As imagens estao identicas. Favor atualizar as fotos.</div>
+                      </div>
+                      <img src="{{ imv.urlimage }}" class="img-property"/>
+                      <div class="prop-cat">{{ imv.alias }}</div>
+                      <div class="info">
+                        <div class="prop-location">{{ imv.neighboor }}</div>
+                        <div class="group-icons bottom">
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-h"></div></div>
+                            <div class="measure">{{ imv.area }} m²</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div class="icon-home-b"></div></div>
+                            <div class="measure">{{ imv.rooms }}</div>
+                          </div>
+                          <div class="icons">
+                            <div class="area"><div [class]="imv.icons"></div></div>
+                            <div class="measure">{{ imv.types }}</div>
+                          </div>
+                        </div>
+                        <div class="price2">R$ {{ imv.price }} </div>
+                      </div>
+                    </div>
+                  </div>   
+                </div>
+              </div>
+            </div>  
+      </div>
+ 
+</ion-content>
+
+<div class="add-property" *ngIf="_userProfile != 0 && _userProfile != 1" (click)="addProperty();"></div>

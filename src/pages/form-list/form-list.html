@@ -1,0 +1,202 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding fullscreen>
+  <br><br><br><br>
+  <div id="content-page-form" *ngIf="showForm">
+    <h1>Faça parte da revolução imobiliária</h1>
+    <hr>
+
+    <div id="content-form" style="display: none;"></div>
+
+    <div class="content-app-form" *ngIf="userType == 1">
+      <form [formGroup]="form" autocomplete="off">
+        <ion-list>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Nome completo</ion-label>
+            <ion-input formControlName="name" type="text" name="name" (keyup)="onKey(nome, 'name')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Qual é seu CPF</ion-label>
+            <ion-input type="tel" name="cpf" formControlName="cpf" (keyup)="onKey(cpf, 'cpf')" [brmasker]="{mask:'000.000.000-00', len:14}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>E-mail *</ion-label>
+            <ion-input formControlName="email" type="text" name="email" (keyup)="onKey(email, 'email')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Telefone</ion-label>
+            <ion-input type="tel" formControlName="tel" name="tel" (keyup)="onKey(tel, 'tel')" [brmasker]="{phone: true}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>CEP</ion-label>
+            <ion-input formControlName="cep" type="tel" name="cep" (keyup)="onKey(cep, 'cep')" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <p class="msg-spam">Utilizaremos esses dados para <br>criar sua conta. Nada de spam.</p>
+          </ion-item>
+        </ion-list>
+      </form>
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-yellow" [disabled]="!form.valid" center ion-button (click)='sendForm(form);'>
+          Entrar na lista de espera
+        </button>
+      </div>
+    </div>
+
+    <div class="content-app-form" *ngIf="userType == 2">
+      <form [formGroup]="form2" autocomplete="off">
+        <ion-input type="origin" value="{{linkOrigin}}" style="display: none;"></ion-input>
+        <ion-list>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Nome completo</ion-label>
+            <ion-input formControlName="name" type="text" name="name" (keyup)="onKey2(nome, 'name')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>CRECI</ion-label>
+            <ion-input formControlName="creci" type="text" name="creci" (keyup)="onKey2(creci, 'creci')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>E-mail *</ion-label>
+            <ion-input formControlName="email" type="text" name="email" (keyup)="onKey2(email, 'email')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Telefone</ion-label>
+            <ion-input formControlName="tel" type="tel" name="tel" (keyup)="onKey2(tel, 'tel')" (keyup)="onKey2(tel, 'tel')" [brmasker]="{phone: true}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>CEP</ion-label>
+            <ion-input formControlName="cep" type="tel" name="cep" (keyup)="onKey2(cep, 'cep')" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Perfil</ion-label>
+            <ion-select formControlName="perfil" name="perfil" (ionChange)="verifyPerfil()" style="font-size: 1em !important;">
+              <ion-option></ion-option>
+              <ion-option>Locação</ion-option>
+              <ion-option>Venda</ion-option>
+              <ion-option>Locação e Venda</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item *ngIf="perfil == 'Venda'">
+            <ion-label class="label" color="primary" stacked>Tipo Venda</ion-label>
+            <ion-select formControlName="tipo_venda" name="tipo_venda" style="font-size: 1em !important;" (ionChange)="onChange(tipo_venda, 'tipo_venda')">
+              <ion-option></ion-option>
+              <ion-option>MCMV</ion-option>
+              <ion-option>Intermediário</ion-option>
+              <ion-option>Alto padrão</ion-option>
+              <ion-option>Todos</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <p class="msg-spam">Utilizaremos esses dados para <br>criar sua conta. Nada de spam.</p>
+          </ion-item>
+        </ion-list>
+        <div style="text-align: center;">
+          <button type="submit" class="btn btn-yellow" [disabled]="!form2.valid" center ion-button (click)='sendForm(form2);'>
+            Entrar na lista de espera
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="content-app-form" *ngIf="userType == 3">
+      <form [formGroup]="form3" autocomplete="off">
+        <ion-list>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Nome completo</ion-label>
+            <ion-input formControlName="name" type="text" name="name" (keyup)="onKey3(nome, 'name')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Qual é seu CPF</ion-label>
+            <ion-input type="tel" name="cpf" formControlName="cpf" (keyup)="onKey3(cpf, 'cpf')" [brmasker]="{mask:'000.000.000-00', len:14}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>E-mail *</ion-label>
+            <ion-input formControlName="email" type="text" name="email" (keyup)="onKey3(email, 'email')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Telefone</ion-label>
+            <ion-input type="tel" formControlName="tel" name="tel" (keyup)="onKey3(tel, 'tel')" [brmasker]="{phone: true}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>CEP</ion-label>
+            <ion-input formControlName="cep" type="tel" name="cep" (keyup)="onKey3(cep, 'cep')" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <p class="msg-spam">Utilizaremos esses dados para <br>criar sua conta. Nada de spam.</p>
+          </ion-item>
+        </ion-list>
+        <div style="text-align: center;">
+          <button type="submit" class="btn btn-yellow" [disabled]="!form3.valid" center ion-button (click)='sendForm(form3);'>
+            Entrar na lista de espera
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="content-app-form" *ngIf="userType == 4">
+      <form [formGroup]="form4" autocomplete="off">
+        <ion-input type="origin" value="{{linkOrigin}}" style="display: none;"></ion-input>
+        <ion-list>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>CNPJ</ion-label>
+            <ion-input formControlName="cnpj" type="tel" name="cnpj" (keyup)="onKey4(cnpj, 'cnpj')" [brmasker]="{mask:'00.000.000/0000-00', len:18}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Nome Fantasia</ion-label>
+            <ion-input formControlName="fantasia" type="text" name="fantasia" (keyup)="onKey4(fantasia, 'fantasia')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Contato</ion-label>
+            <ion-input formControlName="contato" type="text" name="contato" (keyup)="onKey4(contato, 'contato')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>E-mail *</ion-label>
+            <ion-input formControlName="email" type="text" name="email" (keyup)="onKey4(email, 'email')"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>Telefone</ion-label>
+            <ion-input formControlName="tel" type="tel" name="tel" (keyup)="onKey4(tel, 'tel')" [brmasker]="{phone: true}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" color="primary" stacked>CEP</ion-label>
+            <ion-input formControlName="cep" type="tel" name="cep" (keyup)="onKey4(cep, 'cep')" [brmasker]="{mask:'00000-000', len:9}"></ion-input>
+          </ion-item>
+          <ion-item>
+            <p class="msg-spam">Utilizaremos esses dados para <br>criar sua conta. Nada de spam.</p>
+          </ion-item>
+        </ion-list>
+        <div style="text-align: center;">
+          <button type="submit" class="btn btn-yellow" [disabled]="!form4.valid" center ion-button (click)='sendForm(form4);'>
+            Entrar na lista de espera
+          </button>
+        </div>
+      </form>
+    </div>
+
+
+</div>
+
+  <div id="success" *ngIf="msgForm">
+    <br>
+    <h1>Deu tudo certo!</h1>
+    <hr>
+    <br><br><br>
+    <p>Seu cadastro foi recebido com sucesso.<br>Agora é só aguardar.</p>
+
+    <p>Te ligaremos e enviaremos um e-mail assim que seu convite chegar!</p>
+
+    <p>Agradecemos o interesse!<br>Seu convite chegará muito em breve.</p>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div style="text-align: center;">
+      <button type="submit" class="btn btn-yellow" center ion-button (click)='goToPosition();'>
+        VER MINHA POSIÇÃO
+      </button>
+    </div>
+  </div>
+
+</ion-content>
+

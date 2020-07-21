@@ -1,0 +1,39 @@
+<ion-header no-border transparent>
+        <ion-navbar>
+          <button (click)="clearHome();" ion-button menuToggle icon-only color="branco">
+            <ion-icon name='menu'></ion-icon>
+          </button>
+        </ion-navbar> 
+      </ion-header>
+
+<ion-content fullscreen padding class="masters">
+        <div class="header-img">
+            <img src="./../../assets/imgs/logo.png" class="logo"/>
+            <div class="title-login">{{ titleLogin }}</div>
+         </div>   
+         <div class="bg-page" [style.backgroundImage]="'url(./../../assets/imgs/' + userType + '.png)'"></div> 
+        <div class="footer">
+            <form [formGroup]="form" (submit)="loginApp()">
+                <ion-list radio-group no-lines>
+                    <ion-item class="nolines">
+                        <ion-label class="nolines" stacked>Informe seu Email:</ion-label>
+                        <ion-input type="email" placeholder="seu@email.com.br" name="user" formControlName="user"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label color="light" stacked>Digite sua Senha:</ion-label>
+                        <ion-input [type]="_type" placeholder="Se já possuir cadastro!" name="pwd" formControlName="pwd"></ion-input>
+                    </ion-item>
+                    <ion-icon class="showpwd" [name]="_eye" color="azul" (click)='showPassword()'></ion-icon>
+                 </ion-list>
+                <div class="btnslm" align="center">
+                    <button id="btenter" ion-button block type="submit">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="footer-a">
+            <a href="#" (click)="renew();">Esqueceu sua senha?</a>
+        </div>
+        
+  </ion-content>

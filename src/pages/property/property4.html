@@ -1,0 +1,99 @@
+<ion-header>
+        <ion-navbar >
+          <ion-title>{{ profile }}</ion-title>
+        </ion-navbar> 
+        <div class="numbers">
+                <div class="bg-num">
+                    <div class="num">1</div>
+                    <div class="num">2</div>
+                    <div class="num">3</div>
+                    <div class="num">4</div>
+                 </div>
+            </div>
+      </ion-header>
+    
+    <ion-content  padding class="masters">
+    
+        <div class="footer-frm">
+            <form [formGroup]="form">
+                <ion-list radio-group no-lines>
+                    
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.pets.valid || (!form.controls.pets.dirty && !submitAttempt)" color="light" stacked>Aceita animais de estimação?</ion-label>
+                        <ion-label *ngIf="!form.controls.pets.valid && (form.controls.pets.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Selecione uma opção!</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="pets">
+                            <ion-option value="1">Sim</ion-option>
+                            <ion-option value="0">Não</ion-option>                     
+                        </ion-select> 
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.tax.valid || (!form.controls.tax.dirty && !submitAttempt)" color="light" stacked>Valor mensal Condomínio:</ion-label>
+                        <ion-label *ngIf="!form.controls.tax.valid && (form.controls.tax.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o CEP!</strong></ion-label>
+                        <ion-input type="tel" maxlength="9" [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}" placeholder="ex: 100,00" name="tax" formControlName="tax"></ion-input>
+                    </ion-item>
+                    <ion-item class="nolines">
+                            <ion-label *ngIf="form.controls.iptu.valid || (!form.controls.iptu.dirty && !submitAttempt)" color="light" stacked>Valor mensal IPTU:</ion-label>
+                            <ion-label *ngIf="!form.controls.iptu.valid && (form.controls.iptu.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Informe o CEP!</strong></ion-label>
+                            <ion-input type="tel" maxlength="9" [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: '2'}" placeholder="ex: 200,00" name="iptu" formControlName="iptu"></ion-input>
+                        </ion-item>
+                    <ion-item class="nolines">
+                        <ion-label *ngIf="form.controls.concierge.valid || (!form.controls.concierge.dirty && !submitAttempt)" color="light" stacked>Portaria:</ion-label>
+                        <ion-label *ngIf="!form.controls.concierge.valid && (form.controls.concierge.dirty || submitAttempt)" stacked><strong class="error"><ion-icon name="alert"></ion-icon> Possui portaria?</strong></ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="concierge">
+                            <ion-option value="0">24H</ion-option>
+                            <ion-option value="1">Diurna</ion-option>
+                            <ion-option value="2">Noturna</ion-option> 
+                            <ion-option value="3">Sem Portaria</ion-option>                              
+                        </ion-select> 
+                    </ion-item>
+
+                    <ion-item class="nolines">
+                        <ion-label color="light" stacked>Imobiliária:</ion-label>
+                        <ion-select okText="OK" cancelText="Cancelar" placeholder="Selecione" formControlName="reaid">
+                            <ion-option *ngFor="let rea of realestates" [value]="rea.reaid">{{ rea.name }}</ion-option>                           
+                        </ion-select> 
+                    </ion-item>
+
+                    <ion-item class="nolines" >
+                        <ion-label color="light" stacked>Imagens do imóvel</ion-label>
+                    </ion-item>
+                    <ion-item class="nolines" *ngIf="imgPreview.length > 0"> 
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-3 *ngFor="let img of imgPreview">
+                                    <ion-avatar item-start>
+                                        <div class="delimg" (click)="removeImg(imgPreview, img)"><ion-icon name="close"></ion-icon></div>
+                                        <div class="thumb-container" [style.background-image]="'url(' + img + ')'"></div>
+                                    </ion-avatar>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-item>
+                    <ion-item class="nolines">
+                        <button type="button" ion-button outline color="azul" (click)="getPhoto()" icon-start>
+                                <ion-icon name="image"></ion-icon> 
+                                ADICIONAR FOTOS
+                        </button>
+                        <button type="button" ion-button outline color="azul" (click)="takePhoto()" icon-start>
+                                <ion-icon name="camera"></ion-icon> 
+                                TIRAR FOTO
+                        </button>
+                    </ion-item>
+                    
+                </ion-list>
+            </form>
+        </div>
+    </ion-content>
+    
+    <ion-footer>
+        <ion-toolbar color="azul">
+           <!--  <button id="btback" ion-button block icon-left type="submit">
+                <ion-icon name="arrow-dropleft-circle"></ion-icon>
+                VOLTAR
+            </button> -->
+            <button id="btok" ion-button block icon-right type="button" (click)="submitProperty()">
+                AVANÇAR
+                <ion-icon name="arrow-dropright-circle"></ion-icon>
+            </button>
+        </ion-toolbar>
+      </ion-footer>

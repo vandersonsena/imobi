@@ -1,0 +1,39 @@
+<ion-content padding class="gray menuios" (ionScroll)="scrolling($event)">
+      <div class="main-home">
+        <div class="map-content">
+          <div #map id="map"></div>
+        </div>
+        <button class="btn-back" ion-button icon-only (click)="goBack()">
+          <ion-icon name="arrow-back" color="amarelo"></ion-icon>
+        </button>
+          <div class="suggestions">
+            <h4 class="suggestions-h4">Próximos de Você</h4>
+            <div class="listprops">
+              <div *ngFor="let pro of ARR_ITEMS" class="thumb-content" (click)="openProperty(pro.proid);">
+                <div class="img-thumb" [style.background-image]="'url(' + pro.urlimage + ')'"></div>
+                <div class="category"> {{ pro.alias }}</div>
+                  <div class="thumb-details">
+                    <div class="location"> {{ pro.neighboor }}</div>
+                    <div class="modality">{{ pro.modality }}</div>
+                    <div class="price">R$ {{ pro.price }}</div>
+                    <div class="group-icons">
+                      <div class="icons">
+                        <div class="area"><div class="icon-home-h"></div></div>
+                        <div class="measure">{{ pro.area }} m²</div>
+                      </div>
+                      <div class="icons">
+                        <div class="area"><div class="icon-home-b"></div></div>
+                        <div class="measure">{{ pro.rooms }}</div>
+                      </div>
+                      <div class="icons">
+                        <div class="area"><div [class]="pro.icons"></div></div>
+                        <div class="measure">{{ pro.types }}</div>
+                      </div>
+                    </div> 
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>    
+  </ion-content>
+  

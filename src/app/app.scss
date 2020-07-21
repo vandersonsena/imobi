@@ -1,0 +1,140 @@
+// http://ionicframework.com/docs/theming/
+
+@import '../theme/fonts';
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.md .menu-inner {
+    //background: none !important;
+    background: #fefefe !important;
+  }
+  [icon-left] ion-icon, [icon-start] ion-icon {
+    font-size: 1.8em;
+    /* line-height: .67; */
+    pointer-events: none;
+    padding-right: 0.3em;
+}
+  .ios .menu-inner  {
+    background: none !important;
+  }
+  .menu-inner .content-ios  {
+    background-color: #fefefe !important;
+  } 
+  .bg-wizard {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 26, 54, 0.753);
+    z-index: 10000;
+    overflow-y: hidden; // hide vertical
+    overflow-x: hidden; // hide horizontal
+    display: none;
+  }
+  .bg-broker-schedule-visit {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: rgba(1, 26, 54, 0.733);
+    z-index: 10000;
+    overflow-y: hidden; // hide vertical
+    overflow-x: hidden; // hide horizontal
+  }
+  .hide-bg {
+    display: none;
+  }
+
+  .bg-broker-content {
+    position: relative;
+    width: auto;
+    height: inherit;
+    border-radius: 20px;
+    background-color: color($colors, verde);
+    z-index: 10000;
+  }
+  .close-schedule-visit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+    z-index: inherit;
+  }
+  .calendar {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .calendar-size {
+    font-size: 50vw;
+  }
+  .check-size {
+    position: absolute;
+    top: calc(70vw - 45%);
+    right: 15%;
+    font-size: 15vw;
+    width: 15vw;
+    height: 15vw;
+    background-color: color($colors, verde);
+    border-radius: 50px;
+    border: 0px;
+  }
+  .msg-calendar {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, branco);
+    font-size: 4.5vw;
+  }
+  .btn-schedule-visit {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  #btw {
+    background-color: transparent; 
+    border-radius: 7px;
+    border: 2px color($colors, branco) solid;
+    font-family: "Roboto", "Helvetica Neue"; 
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    color: color($colors, branco);
+    width: 45%;
+}
+#btc {
+  background-color: transparent; 
+  border-radius: 7px;
+  border: 2px color($colors, branco) solid;
+  font-family: "Roboto", "Helvetica Neue"; 
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  color: color($colors, branco);
+  width: 45%;
+}

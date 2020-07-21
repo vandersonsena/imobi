@@ -1,0 +1,260 @@
+page-login {
+  .bar-button-default-ios {
+    color: white;
+  }
+  .bar-button-default-md {
+    color: white;
+  }
+  ion-header .toolbar .toolbar-title {
+    color: color($colors, branco) !important;
+    font-size: 8vw;
+    text-shadow: 1px 1px #000;
+  }
+
+  ion-header {
+    .toolbar {
+      position: absolute;
+
+      .toolbar-background {
+        background: transparent;
+      }
+      .toolbar-title {
+        color: black;
+      }
+    }
+  }
+  .header-img {
+    position: absolute;
+    margin-top: 50px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    // display: none;
+  }
+
+  .masters {
+    background-color: color($colors, azul);
+    color: white;
+  }
+
+  .nolines {
+    background-color: transparent;
+    color: white;
+  }
+  .bg-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position-x: 30%, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.2);
+  }
+  #btenter {
+    //position: relative;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 2px color($colors, branco) solid;
+    font-family: 'Montserrat Regular';
+    font-weight: bold;
+    font-size: 3vw;
+    text-decoration: none;
+    color: color($colors, branco);
+    width: 40%;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    bottom: -10px;
+  }
+
+  .btnsl {
+    position: relative;
+    border-radius: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+    top: 45px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3vw;
+}
+  .footer-a {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat Regular';
+    font-size: 3vw;
+  }
+  .title-login {
+    font-family: 'Montserrat Regular';
+    font-size: 3vh;
+    font-weight: normal;
+    font-weight: bold;
+    color: #fff
+}
+  // use in cadastro page or other pages that have input forms
+  .label-md[stacked] {
+    color: white;
+    font-weight: bold;
+  }
+  .label-md[stacked],
+  .label-md[floating] {
+    margin-left: 10px;
+    font-family: 'Montserrat Regular';
+    font-size: 4vw;
+  }
+  .label-ios[stacked],
+  .label-ios[floating] {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-family: 'Montserrat Regular';
+    font-size: 4vw;
+  }
+  .item-input-has-focus .label-md[stacked],
+  .input-has-focus .label-md[stacked] {
+    color: white;
+    font-weight: bold;
+  }
+  .label-ios[stacked] {
+    color: white;
+    font-weight: bold;
+  }
+  .item-input-has-focus .label-ios[stacked],
+  .input-has-focus .label-ios[stacked] {
+    color: white;
+    font-weight: bold;
+
+  }
+  .text-input-ios {
+    border-radius: 4px;
+    border: 1px solid rgb(197, 196, 196);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(243, 244, 245);
+    padding-left: 5px;
+    font-family: 'Montserrat Regular';
+  }
+  .text-input-md {
+    border-radius: 4px;
+    border: 1px solid rgb(197, 196, 196);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(243, 244, 245);
+    padding-left: 5px;
+    font-family: 'Montserrat Regular';
+  }
+  .item-md {
+    margin-bottom: -15px;
+    padding-right: 5px;
+  }
+  .item-ios {
+    margin-bottom: -15px;
+    padding-right: 5px;
+  }
+  .list-md {
+    margin: 0px 6px 25px;
+  }
+  .list-ios {
+    margin: 0px 7px 25px;
+  }
+  .item-label-stacked .text-input-md,
+  .item-label-floating .text-input-md {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 25px;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 4vw;
+  }
+  .item-label-stacked .text-input-ios,
+  .item-label-floating .text-input-ios {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 25px;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 4vw;
+  }
+  .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus)
+    .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md
+    .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md
+    .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+  .list-md
+    .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input.item-input-has-focus:last-child,
+  .list-md .item-input.input-has-focus:last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+    .item-inner,
+  .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+    .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .item-md.item-input.item-input-has-focus .item-inner,
+  .item-md.item-input.input-has-focus .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input:last-child {
+    border-bottom: none;
+  }
+}
+.md {
+  .showpwd {
+    position: relative;
+    font-size: 8vw;
+    right: calc(-50% + 10vw);
+    width: 100%;
+    bottom: 7.5vw;
+  }
+  .logo {
+    max-width: 50%;
+  }
+}
+.ios {
+  .showpwd {
+    position: relative;
+    font-size: 8vw;
+    right: calc(-50% + 7vw);
+    width: 100%;
+    bottom: 6vw;
+  }
+  .logo {
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,96 @@
+page-form-list {
+
+  ion-header {
+      .toolbar {
+          .toolbar-background {
+              background: transparent;
+            }
+            .toolbar-title {
+              color: color($colors, azul);
+            }
+          }
+        }
+
+
+  .header-md::after {
+    box-shadow: none !important;
+    background-image: none;
+  }
+
+  h1 {
+    text-align: center;
+    color:#009ad8;
+    font-family: 'Montserrat Regular';
+    font-weight: bold;
+  }
+
+  p {
+    font-family: 'Montserrat Regular';
+  }
+
+  hr {
+    width: 30%;
+    border: 0;
+    border-top: 1px solid #0099ff;
+  }
+
+  .label {
+    color: #000 !important;
+  }
+
+  .btn {
+    background-color: #ccc;
+    border-radius: 100px;
+    font-family: 'Montserrat Regular';
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #aaa;
+    min-height: 8vw;
+    text-transform: uppercase;
+  }
+
+  .btn-yellow {
+    background-color: #FEDD00;
+    color: #545454;
+  }
+
+  .msg-spam {
+    font-size: 11px;
+    color: #ccc;
+    text-align: center;
+  }
+
+  ion-select {
+    font-size: 1em;
+  }
+
+  #success {
+    p {
+      text-align: center;
+      color: #aaa;
+      font-size: 5vw;
+    }
+
+    .btn-yellow {
+      background-color: #009AD8;
+      color: #fff;
+    }
+  }
+
+  ion-input {
+    height: 30px !important;
+    width: 100%;
+    border-color: #858585;
+    color: #858585;
+    font-size: 22px;
+    font-family: 'Montserrat Regular';
+    font-weight: bold;
+  }
+
+  ion-label {
+    font-family: 'Montserrat Regular';
+    font-size: 15px;
+    color: #858585;
+  }
+}

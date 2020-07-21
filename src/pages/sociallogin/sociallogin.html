@@ -1,0 +1,241 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content fullscreen padding>
+
+  <div id="content-loading" style="display: none;">
+    <img src="./../../assets/imgs/loading-form.gif" class="loading-form"/>
+    <p>Carregando...</p>
+  </div>
+
+  <div id="content-slides">
+    <ion-slides *ngIf="userType == 1">
+      <ion-slide>
+        <img src="./../../assets/imgs/slide1.png" class="img-destak"/>
+        <h1>Hmmm, está procurando um imóvel?</h1>
+        <h3>Você achou a solução perfeita para a sua necessidade. Vamos te ajudar a resolver isso...</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(1);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet active"></span>
+          <span class="bullet"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide2.png" class="img-destak"/>
+        <h1>Você sabia?</h1>
+        <h3>O Imobi Places tem os melhores imóveis para a sua necessidade. Exibiremos tudo que está disponível de acordo com a sua localização.</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(2);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet active"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide3.png" class="img-destak"/>
+        <h1>Faça parte!</h1>
+        <h3>Entre na plataforma com a rede mais completa de imóveis da sua região.</h3>
+        <br><br>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <button type="button" class="btn btn-yellow" style="width: 100%;" ion-button (click)='toForm();'>
+                PEDIR MEU CONVITE
+              </button>
+            </ion-col>
+            <ion-col>
+              <button id="bt" type="button" class="btn" style="width: 100%;" ion-button (click)='signin();'>
+                Log In
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet"></span>
+          <span class="bullet active last"></span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-slides *ngIf="userType == 3">
+      <ion-slide>
+        <img src="./../../assets/imgs/slide1.png" class="img-destak"/>
+        <h1>Quer alugar ou vender<br>seu imóvel?</h1>
+        <h3>Você achou a solução perfeita para a sua necessidade. Vamos te ajudar a resolver isso...</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(1);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet active"></span>
+          <span class="bullet"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide2.png" class="img-destak"/>
+        <h1>Você sabia?</h1>
+        <h3>O Imobi Places te conecta a uma rede de pessoas que estão procurando exatamente o que você oferece. Venda ou alugue com rapidez e custo zero.</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(2);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet active"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide3.png" class="img-destak"/>
+        <h1>Faça parte!</h1>
+        <h3>Entre na plataforma que fará você vender ou alugar num piscar de olhos.</h3>
+        <br><br>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <button type="button" class="btn btn-yellow" style="width: 100%;" ion-button (click)='toForm();'>
+                PEDIR MEU CONVITE
+              </button>
+            </ion-col>
+            <ion-col>
+              <button id="bt" type="button" class="btn" style="width: 100%;" ion-button (click)='signin();'>
+                Log In
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet"></span>
+          <span class="bullet active last"></span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-slides *ngIf="userType == 2">
+      <ion-slide>
+        <img src="./../../assets/imgs/slide1.png" class="img-destak"/>
+        <h1>Cansado de correr atrás<br>de clientes e imóveis?</h1>
+        <h3>Você achou a solução perfeita para a sua necessidade. Vamos te ajudar a resolver isso...</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(1);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet active"></span>
+          <span class="bullet"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide2.png" class="img-destak"/>
+        <h1>Você sabia?</h1>
+        <h3>O Imobi Places inverte essa lógica e faz o cliente e imóvel irem até você. É só ficar ligado no app para receber solicitações de visitas. <br>Direcionamos as mais próximas de você em tempo real. <br>Tempo médio entre solicitação e visita: 30 minutos</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(2);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet active"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide3.png" class="img-destak"/>
+        <h1>Faça parte!</h1>
+        <h3>Entre na plataforma que te dá acesso aos melhores imóveis e a clientes interessados em um piscar de olhos.</h3>
+        <br><br>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <button type="button" class="btn btn-yellow" style="width: 100%;" ion-button (click)='toForm();'>
+                PEDIR MEU CONVITE
+              </button>
+            </ion-col>
+            <ion-col>
+              <button id="bt" type="button" class="btn" style="width: 100%;" ion-button (click)='signin();'>
+                Log In
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet"></span>
+          <span class="bullet active last"></span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <ion-slides *ngIf="userType == 4">
+      <ion-slide>
+        <img src="./../../assets/imgs/slide1.png" class="img-destak"/>
+        <h1>Quer fechar mais negócios e receber novos leads de bandeja?</h1>
+        <h3>Você achou a solução perfeita para a sua necessidade. Vamos te ajudar a resolver isso...</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(1);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet active"></span>
+          <span class="bullet"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide2.png" class="img-destak"/>
+        <h1>Você sabia?</h1>
+        <h3>O Imobi Places te conecta a uma ampla rede de pessoas procurando seus imóveis, corretores associados que podem trabalhar pra você sem burocracia e ainda aumenta sua base de imóveis te enviando leads diariamente.</h3>
+        <br><br>
+        <button type="button" class="btn btn-yellow" ion-button (click)='goToSlide(2);'>
+          Próximo
+        </button>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet active"></span>
+          <span class="bullet last"></span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="./../../assets/imgs/slide3.png" class="img-destak"/>
+        <h1>Faça parte!</h1>
+        <h3>Entre na plataforma que revolucionará o seu negócio.</h3>
+        <br><br>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <button type="button" class="btn btn-yellow" style="width: 100%;" ion-button (click)='toForm();'>
+                PEDIR MEU CONVITE
+              </button>
+            </ion-col>
+            <ion-col>
+              <button id="bt" type="button" class="btn" style="width: 100%;" ion-button (click)='signin();'>
+                Log In
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="field-bullet">
+          <span class="bullet"></span>
+          <span class="bullet"></span>
+          <span class="bullet active last"></span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="footer"></div>
+
+  </ion-content>

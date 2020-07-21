@@ -1,0 +1,33 @@
+page-splash {  
+
+    .masters {
+        background-color: color($colors, azul);
+        color: white;
+    }
+    .logo-animation {
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 60px);
+        left: 0;
+    }
+    .logo-wp {
+        position: relative;
+        background-image: url('./../../assets/imgs/logo-without-pin.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 0px;
+        left: calc(50% - 110px);
+        height: 110px;
+    }
+    .logo-p {
+        position: relative;
+        background-image: url('./../../assets/imgs/pin-logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -110px;
+        left: calc(50% - 110px);
+        height: 110px;
+    }
+
+  
+}

@@ -1,0 +1,453 @@
+
+page-schedule {
+  .bar-button-default-ios {
+    color: white;
+}
+.bar-button-default-md {
+    color: white;
+}  
+ion-header .toolbar .toolbar-title {
+    color: white !important;
+    font-size: 6vw;
+    text-align: center;
+}
+.masters {
+  background-color: color($colors, branco);
+  color: white;
+}
+
+ion-header {
+    .toolbar {
+      position: absolute;
+  
+      .toolbar-background {
+        background: color($colors, azul);
+      }
+      .toolbar-title {
+        color: black;
+      }
+    }
+  }
+  p {
+    color: #fff;
+  }
+  
+  .list-ios .item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .item-ios.item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .list-md .item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .item-md.item-block .item-inner {
+    border-bottom: none !important;
+  }
+  .item-md {
+    background: none;
+    color: white;
+  }
+  .item-md.activated {
+    background: none;
+  }
+  .item-ios {
+    background: none;
+    color: white;
+  }
+  .item-ios.activated {
+    background: none;
+  }
+  
+  .separator {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: 10px;
+  }
+  .line {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    height: 3px;
+    background-color: color($colors, cinza);
+    left: calc(100% - 66%);
+  }
+  .suggestions {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    left: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .listprops {
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    margin-bottom: 30px;
+  }
+  .img-schedule {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+    background-image: url(./../../assets/imgs/mansao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  .status-visit {
+    position: absolute;
+    bottom: -5px;
+    min-width: 22vw;
+    height: auto;;
+    color: white;
+    background-color: brown;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    text-align: center;
+    line-height: 2.5vh;
+    font-size: 2.2vw;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .status-visit {
+    position: absolute;
+    bottom: -5px;
+    min-width: 22vw;
+    height: auto;;
+    color: white;
+    background-color: color($colors, verde);
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    text-align: center;
+    line-height: 2.5vh;
+    font-size: 2.2vw;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .info {
+    position: absolute;
+    width: 34%;
+    //background-color: aqua;
+    top: 0;
+    height: 80px;
+    left: 32%;;
+  }
+  .info-broker {
+    position: absolute;
+    width: 30%;
+    //background-color: blueviolet;
+    top: 0;
+    height: 80px;
+    right: 3px;
+  }
+  .img-broker {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(./../../assets/imgs/mansao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    z-index: 1000;
+  }
+  .name-broker {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    width: 100%;
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  .h-line {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: color($colors, azul);
+    z-index: 1000;
+  }
+  .v-line {
+    position: absolute;
+    top: 60px;
+    left: 49%;
+    width: 2px;
+    height: 5.5vh;
+    background-color: color($colors, azul);
+    z-index: 1000;
+  }
+  .day {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    text-align: center;
+    width: 43%;
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 6.6vw;
+    z-index: 1000;
+  }
+  .month {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 43%;
+    text-align: center;
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-size: 3vw;
+    z-index: 1000;
+  }
+  .hour {
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    text-align: center;
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-size: 2.5vw;
+    padding-top: 10px;
+    border-radius: 30px;
+    z-index: 1000;
+    font-weight: bold;
+  }
+  .prop-cat {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    line-height: 10px;
+    width: auto;
+    border-radius: 10px;
+    background-color: color($colors, cinza);
+    color: color($colors, chumbo);
+    text-align: center;
+    font-family: "Roboto", "Helvetica Neue"; 
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+.prop-location {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    background-image: url(./../../assets/icon/app-icon/13.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: left;
+    font-family: "Roboto", "Helvetica Neue"; 
+    font-size: 2.2vw;
+    color: color($colors, chumbo);
+    line-height: 15px;
+    padding-left: 15px;
+  }
+  .prop-area {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    height: 55px;
+    top: 40px;
+    left: -5px;
+  }
+  .icon-area {
+    position: relative;
+    top: 5px;
+    width: auto;
+    height: 35px;
+    background-image: url(./../../assets/icon/v2/home_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .prop-room {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    height: 35px;
+    top: 40px;
+    left: 35px;
+  }
+  .icon-room {
+    position: relative;
+    top: 5px;
+    width: auto;
+    height: 35px;
+    background-image: url(./../../assets/icon/v2/bed_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .prop-pets {
+    position: absolute;
+    width: 30px;
+    text-align: center;
+    height: 55px;
+    top: 40px;
+    left: 75px;
+  }
+  .icon-pets {
+    position: relative;
+    top: 5px;
+    width: auto;
+    height: 35px;
+    background-image: url(./../../assets/icon/v2/pet_ico_yellow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .measure {
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-size: 9px;
+    position: relative;
+    display: inline-block;
+  }
+  .modality {
+    position: absolute;
+    top: 25px;
+    left: -5px;
+    text-align: center;
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-size: 3vw;
+  }
+  .price {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    text-align: center;
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, chumbo);
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 30px;
+  }
+  h4 {
+    font-family: "Roboto", "Helvetica Neue"; 
+    color: color($colors, azul);
+    font-size: 5.6vw;
+  }
+  .suggestions-h4 {
+    margin-left: 0;
+  }
+  // use in cadastro page or other pages that have input forms
+  .label-md[stacked] {
+    color: color($colors, chumbo);
+    font-weight: bold;
+  }
+  .label-md[stacked], .label-md[floating] {
+      margin-left: 10px;
+  }
+  .label-ios[stacked], .label-ios[floating] {
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .item-input-has-focus .label-md[stacked], .input-has-focus .label-md[stacked] {
+    color: color($colors, chumbo);;;
+    font-weight: bold;
+  }
+  .label-ios[stacked] {
+    color: color($colors, chumbo);;
+    font-weight: bold;
+  }
+  .item-input-has-focus .label-ios[stacked], .input-has-focus .label-ios[stacked] {
+    color: color($colors, chumbo);;;
+    font-weight: bold;
+  }
+  .text-input-ios {
+    border-radius: 4px;
+    border: 1px solid rgb(197, 196, 196);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(243, 244, 245);
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .text-input-md {
+    border-radius: 4px;
+    border: 1px solid rgb(197, 196, 196);            
+    width: 100%;
+    height: 40px;
+    background-color: rgb(243, 244, 245);
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+  .item-md {
+      margin-bottom: -15px;
+      padding-right: 5px;
+      font-size: 1.3rem;
+  }
+  .item-ios {
+    margin-bottom: -15px;
+    padding-right: 5px;
+    font-size: 1.3rem;
+  }
+  .list-md {
+    margin: 0px 6px 25px;
+  }
+  .list-ios {
+    margin: 0px 7px 25px;
+  }
+  .item-label-stacked .text-input-md, .item-label-floating .text-input-md {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 25px;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    padding-left: 35px;
+  }
+  .item-label-stacked .text-input-ios, .item-label-floating .text-input-ios {
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    border-radius: 25px;
+    color: color($colors, chumbo);
+    font-weight: bold;
+    padding-left: 35px;
+  }
+  .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .list-md .item-input:last-child {
+    border-bottom: none;
+  }
+  .content-md {
+    background: none !important;
+  }
+}

@@ -1,0 +1,134 @@
+<ion-content *ngFor="let pro of ARR_ITEMS" class="masters">
+
+    <div class="bg-schedule animated fadeIn" *ngIf="_showSchedule">
+      <div class="schedule">
+        <button class="btn-close" ion-button icon-only (click)="cancel()">
+          <ion-icon name="close" color="amarelo"></ion-icon>
+        </button>
+        <div class="title-schedule">AGENDAR VISITA</div>
+        <div class="title-day-schedule">DIA</div>
+        <div class="title-month-schedule">MÊS</div>
+        <div class="day-schedule">{{day}}</div>
+        <div class="month-schedule">{{month}}</div>
+        <div class="h-line"></div>
+        <div class="title-hour-schedule">HORA</div>
+        <div class="hour-schedule">{{hour}}</div>
+        <ion-datetime #myPicker
+                      displayFormat="DD/MM/YYYY HH:mm" 
+                      (ionChange)="updateScheduleDateTime(myPicker.value)"
+                      hourValues="8,9,10,11,12,13,14,15,16,17,18,19" 
+                      cancelText="Cancelar" 
+                      doneText="OK" 
+                      [(ngModel)]="myDateSelected"></ion-datetime>
+        <div class="btn-schedule">
+          <button id="btw" type="button" ion-button (click)='saveSchedule();'>
+            CONFIRMAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+        <button class="btn-back" ion-button icon-only (click)="goBack()">
+          <ion-icon name="arrow-back" color="amarelo"></ion-icon>
+        </button>
+        <ion-slides paginationClickable=true
+                    initialSlide=0
+                    loop=true
+                    autoplay=5000
+                    speed=2000
+                    #mySlider>
+          <ion-slide *ngFor="let item of pro.images" class="home-slide">
+            <div class="img-slide" [style.background-image]="'url(' + item.urlimage + ')'"></div>
+          </ion-slide>
+        </ion-slides>
+        <div class="swiper-button-next" (click)="slideNext()"></div>
+        <div class="swiper-button-prev" (click)="slidePrev()"></div>
+        
+        <div id="tv"></div>
+        <div class="prop-details">
+          <button class="btn-route" ion-button icon-only (click)="goToProperty();">
+            <ion-icon name="compass" class="fav-icon" color="amarelo"></ion-icon>
+          </button>
+          <button class="btn-fav" ion-button (click)="favorite()" icon-only>
+            <ion-icon name="heart" class="fav-icon" color="{{favoriteColor}}" ></ion-icon>
+          </button>
+          <button class="btn-zoom" (click)="openModal(pro.images)" ion-button icon-only>
+            <ion-icon name="search" class="fav-icon" color="amarelo"></ion-icon>
+          </button>
+          <div class="start-scroll"></div>
+
+          <div class="scroll-details">
+
+              <div class="prop-cat">{{ pro.alias }}</div>
+              <div class="prop-location"> {{ pro.neighboor }}</div>
+              <div class="title-description"><strong>Descrição</strong></div>
+              <div class="details-description2"[innerHTML]="'Visitas: ' + pro.visitdates"></div>
+              <div class="details-description" [innerHTML]="pro.description"></div>
+
+              <div class="group-icons">
+                <div class="icons">
+                  <div class="area"><div class="icon-home-h"></div></div>
+                  <div class="measure">{{ pro.area }} m²</div>
+                </div>
+                <div class="icons">
+                  <div class="area"><div class="icon-home-b"></div></div>
+                  <div class="measure">{{ pro.rooms }}</div>
+                </div>
+                <div class="icons">
+                  <div class="area"><div [class]="pro.icons"></div></div>
+                  <div class="measure">{{ pro.types }}</div>
+                </div>
+              </div>
+
+              <div class="group-details">
+                  <div class="details"> 
+                    <div class="tax">
+                      <span>{{ pro.title }},</span>
+                      <span *ngIf="pro.bathrooms > 0">contendo {{ pro.bathrooms }} banheiro(s), </span>
+                      <span *ngIf="pro.garage > 0">com {{ pro.garage }} vaga(s) de garagem, </span>
+                      <span *ngIf="pro.furniture == 1">mobiliado,</span>
+                      <span *ngIf="pro.occupied == 1">encontra-se ocupado no momento,</span>
+                      <span *ngIf="pro.concierge > 0">com portaria {{ pro.concierge }},</span>
+                      <span *ngIf="pro.modid == 1 && pro.iptu > 0">o valor do IPTU &eacute; de {{ pro.iptu | currency: 'R$' : 'symbol' : '1.2-2' : 'pt' }}</span>
+                      <span *ngIf="pro.modid == 1 && pro.tax > 0">o valor do condom&iacute;nio &eacute; de {{ pro.tax | currency: 'R$' : 'symbol' : '1.2-2' : 'pt' }}</span>
+                      <span>esperando pela sua visita!</span>
+                    </div>
+                  </div>
+                 
+                  <div class="details broker-width">
+                    <div class="group-broker" *ngIf="pro.broid > 0">
+                      <div class="img-broker" [style.background-image]="'url(' + pro.imgbroker + ')'"></div>
+                      <div class="name-broker"><strong>CORRETOR</strong><br>{{ pro.broker }}</div>
+                    </div>
+                    <div class="group-broker" *ngIf="pro.reaid > 0">
+                      <div class="img-realestate" [style.background-image]="'url(' + pro.imgrealestate + ')'"></div>
+                      <div class="name-realestate"><strong>IMOBILIARIA</strong><br>{{ pro.realestate }}</div>
+                    </div>
+                  </div>
+                </div>
+              <div id="lblsell" class="modality animated fadeIn" (click)="showLoc()">Venda</div>
+              <div id="lblprice" class="price animated fadeIn" (click)="showLoc()">R$ {{ pro.price }}</div>
+              <div id="lblloc" class="modalityloc hideloc animated fadeIn" *ngIf="pro.priceloc > 0" (click)="showSell()">Loca&ccedil;&atilde;o</div>
+              <div id="lblpriceloc" class="priceloc hideloc animated fadeIn" *ngIf="pro.priceloc > 0" (click)="showSell()">R$ {{ pro.priceloc }}</div>
+          </div>
+        </div>
+        
+</ion-content>
+<div *ngIf="!_showSchedule" class="end-scroll"></div>
+<div *ngIf="!_showSchedule" class="btn-actions">
+  <button class="bt" type="button" ion-button (click)='schedule();'>
+    AGENDAR
+  </button>
+  <div *ngIf="_checkingPosition" class="visit-loading"><img src="../../assets/imgs/loading.gif"></div>
+  <button class="bt" [disabled]="_disableVisit" type="button" ion-button (click)='map();'>
+    VER AGORA
+  </button>
+  <div *ngIf="_isRealEstate">
+    <button class="btg" type="button" ion-button (click)='setPropertyStatus(1);'>
+      APROVAR
+    </button>
+    <button class="btr" type="button" ion-button (click)='setPropertyStatus(0);'>
+      REPROVAR
+    </button>
+  </div>
+</div>
